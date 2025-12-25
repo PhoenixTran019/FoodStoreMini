@@ -1,0 +1,17 @@
+D:\FoodStoreMini\FoodStore.Application\bin\Debug\net9.0\FoodStore.Application.deps.json
+D:\FoodStoreMini\FoodStore.Application\bin\Debug\net9.0\FoodStore.Application.dll
+D:\FoodStoreMini\FoodStore.Application\bin\Debug\net9.0\FoodStore.Application.pdb
+D:\FoodStoreMini\FoodStore.Application\bin\Debug\net9.0\FoodStore.Domain.dll
+D:\FoodStoreMini\FoodStore.Application\bin\Debug\net9.0\FoodStore.Domain.pdb
+D:\FoodStoreMini\FoodStore.Application\obj\Debug\net9.0\FoodStore.Application.csproj.AssemblyReference.cache
+D:\FoodStoreMini\FoodStore.Application\obj\Debug\net9.0\FoodStore.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\FoodStoreMini\FoodStore.Application\obj\Debug\net9.0\FoodStore.Application.AssemblyInfoInputs.cache
+D:\FoodStoreMini\FoodStore.Application\obj\Debug\net9.0\FoodStore.Application.AssemblyInfo.cs
+D:\FoodStoreMini\FoodStore.Application\obj\Debug\net9.0\FoodStore.Application.csproj.CoreCompileInputs.cache
+D:\FoodStoreMini\FoodStore.Application\obj\Debug\net9.0\FoodStor.FE4FA98B.Up2Date
+D:\FoodStoreMini\FoodStore.Application\obj\Debug\net9.0\FoodStore.Application.dll
+D:\FoodStoreMini\FoodStore.Application\obj\Debug\net9.0\refint\FoodStore.Application.dll
+D:\FoodStoreMini\FoodStore.Application\obj\Debug\net9.0\FoodStore.Application.pdb
+D:\FoodStoreMini\FoodStore.Application\obj\Debug\net9.0\ref\FoodStore.Application.dll
+D:\FoodStoreMini\FoodStore.Application\bin\Debug\net9.0\FoodStore.Application.runtimeconfig.json
+D:\FoodStoreMini\FoodStore.Application\obj\Debug\net9.0\FoodStore.Application.genruntimeconfig.cache

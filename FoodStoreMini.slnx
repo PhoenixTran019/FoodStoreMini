@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="FoodStore.Application/FoodStore.Application.csproj" />
+  <Project Path="FoodStore.Domain/FoodStore.Domain.csproj" />
+  <Project Path="FoodStore.Infrastructure/FoodStore.Infrastructure.csproj" />
+  <Project Path="FoodStore.Uploads/FoodStore.Uploads.csproj" />
+  <Project Path="FoodStoreMini.API/FoodStoreMini.API.csproj" />
+</Solution>

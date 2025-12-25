@@ -1,0 +1,14 @@
+D:\FoodStoreMini\FoodStore.Domain\bin\Debug\net9.0\FoodStore.Domain.deps.json
+D:\FoodStoreMini\FoodStore.Domain\bin\Debug\net9.0\FoodStore.Domain.dll
+D:\FoodStoreMini\FoodStore.Domain\bin\Debug\net9.0\FoodStore.Domain.pdb
+D:\FoodStoreMini\FoodStore.Domain\obj\Debug\net9.0\FoodStore.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\FoodStoreMini\FoodStore.Domain\obj\Debug\net9.0\FoodStore.Domain.AssemblyInfoInputs.cache
+D:\FoodStoreMini\FoodStore.Domain\obj\Debug\net9.0\FoodStore.Domain.AssemblyInfo.cs
+D:\FoodStoreMini\FoodStore.Domain\obj\Debug\net9.0\FoodStore.Domain.csproj.CoreCompileInputs.cache
+D:\FoodStoreMini\FoodStore.Domain\obj\Debug\net9.0\FoodStore.Domain.dll
+D:\FoodStoreMini\FoodStore.Domain\obj\Debug\net9.0\refint\FoodStore.Domain.dll
+D:\FoodStoreMini\FoodStore.Domain\obj\Debug\net9.0\FoodStore.Domain.pdb
+D:\FoodStoreMini\FoodStore.Domain\obj\Debug\net9.0\ref\FoodStore.Domain.dll
+D:\FoodStoreMini\FoodStore.Domain\bin\Debug\net9.0\FoodStore.Domain.runtimeconfig.json
+D:\FoodStoreMini\FoodStore.Domain\obj\Debug\net9.0\FoodStore.Domain.csproj.AssemblyReference.cache
+D:\FoodStoreMini\FoodStore.Domain\obj\Debug\net9.0\FoodStore.Domain.genruntimeconfig.cache

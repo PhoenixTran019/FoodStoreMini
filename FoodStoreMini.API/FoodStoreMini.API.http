@@ -1,0 +1,6 @@
+@FoodStoreMini.API_HostAddress = http://localhost:5047
+
+GET {{FoodStoreMini.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
