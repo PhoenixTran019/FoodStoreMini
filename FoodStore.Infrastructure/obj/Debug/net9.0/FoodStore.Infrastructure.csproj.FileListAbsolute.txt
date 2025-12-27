@@ -17,3 +17,4 @@ D:\FoodStoreMini\FoodStore.Infrastructure\obj\Debug\net9.0\refint\FoodStore.Infr
 D:\FoodStoreMini\FoodStore.Infrastructure\obj\Debug\net9.0\FoodStore.Infrastructure.pdb
 D:\FoodStoreMini\FoodStore.Infrastructure\obj\Debug\net9.0\FoodStore.Infrastructure.genruntimeconfig.cache
 D:\FoodStoreMini\FoodStore.Infrastructure\obj\Debug\net9.0\ref\FoodStore.Infrastructure.dll
+D:\FoodStoreMini\FoodStore.Infrastructure\obj\Debug\net9.0\FoodStore.Infrastructure.sourcelink.json

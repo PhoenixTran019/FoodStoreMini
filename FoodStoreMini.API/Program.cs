@@ -1,11 +1,17 @@
 ﻿using FoodStore.Application.Auth;
+using FoodStore.Application.Interface.Admin;
 using FoodStore.Application.Interface.Auth;
+using FoodStore.Application.Interface.Menu;
+using FoodStore.Application.Interface.Order;
 using FoodStore.Domain.Data;
+using FoodStore.Infrastructure.Services.Admin;
 using FoodStore.Infrastructure.Services.Auths;
+using FoodStore.Infrastructure.Services.Menu;
+using FoodStore.Infrastructure.Services.Orders;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi;
+using Microsoft.OpenApi.Models;
 using System.Text;
 
 
@@ -20,13 +26,40 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-
+builder.Services.AddHttpContextAccessor();
 
 //Đăng ký Swagger
 builder.Services.AddEndpointsApiExplorer();
+// --- 3. ĐĂNG KÝ SWAGGER (Cấu hình có nút Authorize) ---
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "FoodStore API", Version = "v1" });
+    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "FoodStore API", Version = "v1" });
+
+    // Cấu hình nút Authorize chuẩn 
+    c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+        Description = "Nhập: Bearer [token]"
+    });
+
+    c.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+    {
+        {
+            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+            {
+                Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                {
+                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            System.Array.Empty<string>()
+        }
+    });
 });
 
 
@@ -38,6 +71,10 @@ builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("Jwt"));
 // 2. Đăng ký dịch vụ 
 builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IMenuService, MenuService>();
+builder.Services.AddScoped<IAdminCustomerService, AdminCustomerService>();
+builder.Services.AddScoped<ICusOrderService, CusOrderService>();
+
 
 // 3. Cấu hình Authentication (Bắt buộc)
 builder.Services.AddAuthentication(options => {
@@ -75,6 +112,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

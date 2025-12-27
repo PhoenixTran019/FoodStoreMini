@@ -2,7 +2,7 @@
 using FoodStore.Application.Interface.Auth;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FoodStoreMini.API.Controllers
+namespace FoodStoreMini.API.Controllers.Auth
 {
     [ApiController]
     [Route("api/Account")]

@@ -1,0 +1,13 @@
+D:\FoodStoreMini\FoodStore.Uploads\bin\Debug\net9.0\FoodStore.Uploads.deps.json
+D:\FoodStoreMini\FoodStore.Uploads\bin\Debug\net9.0\FoodStore.Uploads.dll
+D:\FoodStoreMini\FoodStore.Uploads\bin\Debug\net9.0\FoodStore.Uploads.pdb
+D:\FoodStoreMini\FoodStore.Uploads\obj\Debug\net9.0\FoodStore.Uploads.csproj.AssemblyReference.cache
+D:\FoodStoreMini\FoodStore.Uploads\obj\Debug\net9.0\FoodStore.Uploads.GeneratedMSBuildEditorConfig.editorconfig
+D:\FoodStoreMini\FoodStore.Uploads\obj\Debug\net9.0\FoodStore.Uploads.AssemblyInfoInputs.cache
+D:\FoodStoreMini\FoodStore.Uploads\obj\Debug\net9.0\FoodStore.Uploads.AssemblyInfo.cs
+D:\FoodStoreMini\FoodStore.Uploads\obj\Debug\net9.0\FoodStore.Uploads.csproj.CoreCompileInputs.cache
+D:\FoodStoreMini\FoodStore.Uploads\obj\Debug\net9.0\FoodStore.Uploads.sourcelink.json
+D:\FoodStoreMini\FoodStore.Uploads\obj\Debug\net9.0\FoodStore.Uploads.dll
+D:\FoodStoreMini\FoodStore.Uploads\obj\Debug\net9.0\refint\FoodStore.Uploads.dll
+D:\FoodStoreMini\FoodStore.Uploads\obj\Debug\net9.0\FoodStore.Uploads.pdb
+D:\FoodStoreMini\FoodStore.Uploads\obj\Debug\net9.0\ref\FoodStore.Uploads.dll

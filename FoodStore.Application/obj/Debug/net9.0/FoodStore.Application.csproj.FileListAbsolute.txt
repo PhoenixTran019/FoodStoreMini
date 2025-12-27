@@ -15,3 +15,4 @@ D:\FoodStoreMini\FoodStore.Application\obj\Debug\net9.0\FoodStore.Application.pd
 D:\FoodStoreMini\FoodStore.Application\obj\Debug\net9.0\ref\FoodStore.Application.dll
 D:\FoodStoreMini\FoodStore.Application\bin\Debug\net9.0\FoodStore.Application.runtimeconfig.json
 D:\FoodStoreMini\FoodStore.Application\obj\Debug\net9.0\FoodStore.Application.genruntimeconfig.cache
+D:\FoodStoreMini\FoodStore.Application\obj\Debug\net9.0\FoodStore.Application.sourcelink.json

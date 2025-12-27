@@ -12,3 +12,4 @@ D:\FoodStoreMini\FoodStore.Domain\obj\Debug\net9.0\ref\FoodStore.Domain.dll
 D:\FoodStoreMini\FoodStore.Domain\bin\Debug\net9.0\FoodStore.Domain.runtimeconfig.json
 D:\FoodStoreMini\FoodStore.Domain\obj\Debug\net9.0\FoodStore.Domain.csproj.AssemblyReference.cache
 D:\FoodStoreMini\FoodStore.Domain\obj\Debug\net9.0\FoodStore.Domain.genruntimeconfig.cache
+D:\FoodStoreMini\FoodStore.Domain\obj\Debug\net9.0\FoodStore.Domain.sourcelink.json
