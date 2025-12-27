@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FoodStore.Application.DTOs.Order
+namespace FoodStore.Application.DTOs.Orders
 {
     public class OrderDetailRequestDto
     {

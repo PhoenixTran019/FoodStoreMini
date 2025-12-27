@@ -2,7 +2,7 @@
 using FoodStore.Application.Interface.Admin;
 using FoodStore.Application.Interface.Auth;
 using FoodStore.Application.Interface.Menu;
-using FoodStore.Application.Interface.Order;
+using FoodStore.Application.Interface.Orders;
 using FoodStore.Domain.Data;
 using FoodStore.Infrastructure.Services.Admin;
 using FoodStore.Infrastructure.Services.Auths;
@@ -23,6 +23,32 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(connectionString));
 
 // Add services to the container.
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowNgrok", p => p
+        .SetIsOriginAllowed(origin =>
+            origin == "https://aryan-hypaesthesic-answerably.ngrok-free.dev"
+            || origin.StartsWith("http://localhost:")
+            || origin.StartsWith("https://localhost:")
+            || origin.StartsWith("http://127.0.0.1:")
+            || origin.StartsWith("https://127.0.0.1:")
+        )
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+        .AllowCredentials()
+    );
+});
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

@@ -3,6 +3,7 @@ using FoodStore.Application.DTOs.Auths;
 using FoodStore.Application.Interface.Auth;
 using FoodStore.Domain.Data;
 using FoodStore.Domain.Entities;
+using Humanizer;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -24,36 +25,59 @@ namespace FoodStore.Infrastructure.Services.Auths
         }
 
         //==========SERVICE TO LOGIN==========
-        public async Task<AuthResponseDto> LoginAsync(LoginDto loginDto)
+        public async Task<AuthResponseDto> LoginAsync(LoginDto dto)
         {
-            //Find user by identifier (username or phone)
+            // 1. Chuẩn hóa đầu vào
+            var input = dto.Username?.Trim();
+            if (string.IsNullOrEmpty(input)) throw new Exception("Tài khoản không được để trống");
+
+            // 2. Tìm User (Bao gồm cả Role để lấy RoleName)
+            // Hệ thống cho phép đăng nhập bằng Username (Staff) hoặc SĐT (Customer)
             var user = await _context.Users
                 .Include(u => u.Role)
-                .FirstOrDefaultAsync(u => u.Username == loginDto.Identifier || u.PhoneNumber == loginDto.Identifier);
+                .FirstOrDefaultAsync(u => u.Username == input || u.PhoneNumber == input);
 
-            if(user == null || user.PasswordHash != _jwtService.HashPassword(loginDto.Password))
-                throw new Exception("Username or password is incorrect.");
+            if (user == null || user.IsActive == false)
+                throw new Exception("Tài khoản không tồn tại hoặc đã bị khóa");
 
+            // 3. Kiểm tra Password
+            var hashedInput = _jwtService.HashPassword(dto.Password);
+            if (user.PasswordHash != hashedInput)
+                throw new Exception("Mật khẩu không chính xác");
+
+            // 4. XÁC ĐỊNH PROFILE ID (Điểm mấu chốt bạn yêu cầu)
+            // Nếu là Staff/Admin: ProfileID = Username
+            // Nếu là Customer: ProfileID = Tìm trong bảng UserProfiles dựa trên UserId
             string profileId = "";
-
-            //Specific ProjectID tracing logic
-            if (user.Role.RoleName == "Admin" || user.Role.RoleName == "Staff")
+            if (user.Role.RoleName == "Admin" || user.Role.RoleName == "Staff" || user.Role.RoleName == "Shipper")
             {
-                profileId = user.Username;
+                profileId = user.Username; // Staff dùng Username làm ID
             }
-            else if(user.Role.RoleName == "Customer")
+            else
             {
                 var profile = await _context.UserProfiles.FirstOrDefaultAsync(p => p.UserId == user.UserId);
-                profileId = profile?.ProfileId ?? "NOT_FOUND";
+                profileId = profile?.ProfileId ?? "NoProfile"; // Customer dùng UUID ProfileId
             }
 
-            //Create Token
+            // 5. Tạo Token (Truyền 3 tham số theo JwtService của bạn)
             var token = _jwtService.CreateToken(user, user.Role.RoleName, profileId);
+
+            // 6. Điều hướng URL dựa trên Role
+            var redirectUrl = user.Role.RoleName switch
+            {
+                "Admin" => "/admin/dashboard",
+                "Staff" => "/staff/orders",
+                "Shipper" => "/shipper/tasks",
+                "Customer" => "/home",
+                _ => "/home"
+            };
 
             return new AuthResponseDto
             {
+                Username = user.Username ?? user.PhoneNumber,
                 Token = token,
                 Role = user.Role.RoleName,
+                RedirectUrl = redirectUrl,
                 ProfileId = profileId
             };
         }

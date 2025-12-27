@@ -13,6 +13,8 @@ public partial class OrderTracking
 
     public DateTime? UpdateTime { get; set; }
 
+    public string? StaffNote { get; set; }
+
     public virtual Order? Order { get; set; }
 
     public virtual OrderStatus? Status { get; set; }

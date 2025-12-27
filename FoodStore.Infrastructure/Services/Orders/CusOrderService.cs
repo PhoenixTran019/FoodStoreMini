@@ -1,6 +1,6 @@
 ﻿using FoodStore.Application.Common.Helper;
-using FoodStore.Application.DTOs.Order;
-using FoodStore.Application.Interface.Order;
+using FoodStore.Application.DTOs.Orders;
+using FoodStore.Application.Interface.Orders;
 using FoodStore.Domain.Data;
 using FoodStore.Domain.Entities;
 using Microsoft.AspNetCore.Http;
@@ -109,5 +109,78 @@ namespace FoodStore.Infrastructure.Services.Orders
                 throw;
             }
         }
+
+        public async Task<List<OrderHistoryDto>> GetMyOrderHistoryAsync()
+        {
+            var customerId = _httpContext.HttpContext?.User?.Claims
+                .FirstOrDefault(c => c.Type == System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Sub)?.Value;
+
+            return await _context.Orders
+                .Where(o => o.CustomerId == customerId)
+                .Join(_context.OrderStatuses,
+                    o => o.StatusId,
+                    s => s.StatusId,
+                    (o, s) => new OrderHistoryDto
+                    {
+                        OrderID = o.OrderId,
+                        OrderDate = o.OrderDate,
+                        TotalAmount = o.TotalAmout,
+                        StatusName = s.StatusName,
+                        DeliveryAddress = o.DeliveryAddress,
+                        Note = o.Note
+                    })
+                .OrderByDescending(x => x.OrderDate)
+                .ToListAsync();
+        }
+
+        public async Task<OrderFullResponseDto> GetOrderDetailAsync(string orderId)
+        {
+            // 1. Lấy thông tin đơn hàng
+            var order = await _context.Orders
+                .Include(o => o.Status)
+                .FirstOrDefaultAsync(o => o.OrderId == orderId);
+
+            if (order == null) return null;
+
+            // 2. Lấy thông tin Khách hàng (Sử dụng UserId để join)
+            // Theo script: CustomerID trong Orders tham chiếu đến Users(UserID)
+            var customerProfile = await _context.UserProfiles
+                .FirstOrDefaultAsync(p => p.UserId == order.CustomerId);
+
+            // 3. Lấy thông tin Shipper (Sử dụng ProfileID vì Shipper là Staff/Admin)
+            // Theo logic của bạn: Staff dùng Username làm ProfileID
+            var shipperProfile = await _context.UserProfiles
+                .FirstOrDefaultAsync(p => p.ProfileId == order.ShipperId);
+
+            // 4. Lấy chi tiết các món ăn/combo
+            var details = await _context.OrderDetails
+                .Where(d => d.OrderId == orderId)
+                .Select(d => new OrderDetailDto
+                {
+                    OrderDetailId = d.OrderDetailId,
+                    Quantity = d.Quantity,
+                    UnitPrice = d.UnitPrice,
+                    // Lấy tên món hoặc tên combo
+                    FoodName = _context.FoodItems.Where(f => f.FoodId == d.FoodId).Select(f => f.FoodName).FirstOrDefault(),
+                    ComboName = _context.Combos.Where(c => c.ComboId == d.ComboId).Select(c => c.ComboName).FirstOrDefault()
+                }).ToListAsync();
+
+            return new OrderFullResponseDto
+            {
+                OrderId = order.OrderId,
+                OrderDate = order.OrderDate,
+                StatusName = order.Status?.StatusName,
+                DeliveryAddress = order.DeliveryAddress,
+                Note = order.Note,
+                TotalAmount = order.TotalAmout,
+
+                // Trả về thông tin đã map đúng ID
+                CustomerName = customerProfile != null ? (customerProfile.FirstName + " " + customerProfile.LastName) : "N/A",
+                ShipperName = shipperProfile != null ? (shipperProfile.FirstName + " " + shipperProfile.LastName) : "Chưa bàn giao",
+                Items = details
+            };
+        }
+
+        
     }
 }

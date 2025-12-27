@@ -14,6 +14,8 @@ public partial class UserProfile
 
     public string? LastName { get; set; }
 
+    public string? StaffPhone { get; set; }
+
     public string? Email { get; set; }
 
     public string? Address { get; set; }

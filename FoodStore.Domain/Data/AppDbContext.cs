@@ -285,6 +285,7 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.AvatarUrl).HasColumnName("AvatarURL");
             entity.Property(e => e.Email).HasMaxLength(200);
             entity.Property(e => e.FirstName).HasMaxLength(50);
+            entity.Property(e => e.StaffPhone).HasMaxLength(20);
             entity.Property(e => e.LastName).HasMaxLength(50);
             entity.Property(e => e.UserId)
                 .HasMaxLength(200)

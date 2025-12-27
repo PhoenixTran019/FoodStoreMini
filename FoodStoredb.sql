@@ -34,6 +34,7 @@ Create Table UserProfiles
 	UserID nvarchar(200) Foreign Key References Users(UserID),
 	FirstName nvarchar (50),
 	LastName nvarchar(50),
+	StaffPhone nvarchar(20),
 	Email nvarchar(200),
 	Address nvarchar(555),
 	AvatarURL nvarchar(MAX)
@@ -97,7 +98,8 @@ Create Table Orders
 	OrderDate Datetime2 Default GetDate(),
 	TotalAmout Decimal(18,2),
 	DeliveryAddress nvarchar(555),
-	Note nvarchar(Max)
+	Note nvarchar(Max),
+	StaffDescription nvarchar(max)
 );
 go
 

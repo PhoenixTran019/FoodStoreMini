@@ -32,6 +32,90 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FoodStoreMini.API.Controllers.OdersCon.AdminOrderController",
+    "Method": "UpdateStatus",
+    "RelativePath": "api/AdminOrder/{orderId}/Update-OrderStatus",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "FoodStore.Application.DTOs.Orders.UpdateOrderStatusDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreMini.API.Controllers.OdersCon.AdminOrderController",
+    "Method": "GetPendingOrders",
+    "RelativePath": "api/AdminOrder/admin/pending-orders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreMini.API.Controllers.OdersCon.AdminOrderController",
+    "Method": "GetByCustomer",
+    "RelativePath": "api/AdminOrder/history/customer/{profileId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "profileId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreMini.API.Controllers.OdersCon.AdminOrderController",
+    "Method": "GetByTimeRange",
+    "RelativePath": "api/AdminOrder/history/timeline",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "start",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "end",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreMini.API.Controllers.OdersCon.CustomerOrderController",
+    "Method": "GetOrderStatus",
+    "RelativePath": "api/CustomerOrder/CheckOrderStatus/{orderId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FoodStoreMini.API.Controllers.OdersCon.CustomerOrderController",
     "Method": "CreateOrder",
     "RelativePath": "api/CustomerOrder/CreateOrder",
@@ -41,10 +125,46 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "FoodStore.Application.DTOs.Order.CreateOrderRequestDto",
+        "Type": "FoodStore.Application.DTOs.Orders.CreateOrderRequestDto",
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreMini.API.Controllers.OdersCon.CustomerOrderController",
+    "Method": "GetOrderDetail",
+    "RelativePath": "api/CustomerOrder/Order-detail/{orderId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreMini.API.Controllers.Helpers.HelperController",
+    "Method": "GetAvailableShippers",
+    "RelativePath": "api/Helper/AvailableShippers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreMini.API.Controllers.Helpers.HelperController",
+    "Method": "GetOrderStatus",
+    "RelativePath": "api/Helper/OrderStatus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
