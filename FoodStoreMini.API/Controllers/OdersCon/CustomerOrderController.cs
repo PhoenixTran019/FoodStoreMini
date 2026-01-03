@@ -29,6 +29,7 @@ namespace FoodStoreMini.API.Controllers.OdersCon
         [Authorize(Roles = "Customer")]
         public async Task<IActionResult> CreateOrder([FromBody]CreateOrderRequestDto request)
         {
+            var userId = User.FindFirst(JwtRegisteredClaimNames.Sub)?.Value;
             //Check avilable form database in put
             if (request == null || request.Details == null || !request.Details.Any())
             {
@@ -37,7 +38,7 @@ namespace FoodStoreMini.API.Controllers.OdersCon
             try
             {
                 //Call service to process create order
-                var orederId = await _orderService.CreateOrderAsync(request);
+                var orederId = await _orderService.CreateOrderAsync(request, userId);
 
                 return Ok(new
                 {
@@ -56,19 +57,41 @@ namespace FoodStoreMini.API.Controllers.OdersCon
             }
         }
 
+        //==========CONTROLLER SUPPOST TO CUSTOMER TAKE ACTIVE ORDER==========
+        [Authorize]
+        [HttpGet("active-orders")]
+        public async Task<IActionResult> GetActiveOrders()
+        {
+            var userId = User.FindFirst(JwtRegisteredClaimNames.Sub)?.Value
+             ?? User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            // In ra màn hình console của server
+            Console.WriteLine($"--- DEBUG: UserId nhận được từ Token là: {userId} ---");
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                Console.WriteLine("--- WARNING: Không tìm thấy Sub Claim trong Token! ---");
+            }
+
+            var orders = await _orderService.GetActiveOrdersAsync(userId);
+            return Ok(orders);
+        }
+
+
+
         //==========Customer Check Order Status==========
         [Authorize]
         [HttpGet("CheckOrderStatus/{orderId}")]
         public async Task<IActionResult> GetOrderStatus (string orderId)
         {
             // 1. Kiểm tra đơn hàng có tồn tại và thuộc về User này không
-            var currentUserId = User.FindFirstValue(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Sub);
+            var userId = User.FindFirst(JwtRegisteredClaimNames.Sub)?.Value;
             var order = await _context.Orders.FirstOrDefaultAsync(o => o.OrderId == orderId);
 
             if (order == null) return NotFound("Đơn hàng không tồn tại.");
 
             // Nếu là Customer thì chỉ được xem đơn của mình
-            if (User.IsInRole("Customer") && order.CustomerId != currentUserId)
+            if (User.IsInRole("Customer") && order.CustomerId != userId)
             {
                 return Forbid();
             }
@@ -91,28 +114,41 @@ namespace FoodStoreMini.API.Controllers.OdersCon
             return Ok(timeLine);
         }
 
+
         [Authorize]
-        [HttpGet("Order-detail/{orderId}")]
-        public async Task<IActionResult> GetOrderDetail(string orderId)
+        [HttpGet("my-orders")]
+        public async Task<IActionResult> GetMyOrderHistory()
         {
-            var order = await _orderService.GetOrderDetailAsync(orderId);
-            if (order == null) return NotFound("Đơn hàng không tồn tại.");
+            // 1. Lấy UserId (sub) từ JWT Token đã xác thực
+            var userId = User.FindFirst(JwtRegisteredClaimNames.Sub)?.Value
+             ?? User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
-            // Kiểm tra quyền (Bảo mật)
-            var currentRole = User.FindFirstValue(ClaimTypes.Role);
-            var currentSub = User.FindFirstValue(JwtRegisteredClaimNames.Sub); // UserId đối với KH
+            // In ra màn hình console của server
+            Console.WriteLine($"--- DEBUG: UserId nhận được từ Token là: {userId} ---");
 
-            if (currentRole == "Customer" && order.OrderId != null)
+            if (string.IsNullOrEmpty(userId))
             {
-                // Kiểm tra xem đơn này có phải của khách này không (so sánh UserId)
-                var dbOrder = await _context.Orders.FindAsync(orderId);
-                if (dbOrder.CustomerId != currentSub) return Forbid();
+                Console.WriteLine("--- WARNING: Không tìm thấy Sub Claim trong Token! ---");
             }
 
-            return Ok(order);
+            if (string.IsNullOrEmpty(userId)) return Unauthorized("Không xác định được người dùng.");
+
+            // 2. Gọi Service với tham số ID vừa lấy
+            var orders = await _orderService.GetMyOrderHistoryAsync(userId);
+
+            return Ok(orders);
         }
 
-        
 
+        [Authorize(Roles = "Customer")]
+        [HttpGet("Order-detail/{orderId}")]
+        public async Task<IActionResult> GetDetail(string orderId)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? User.FindFirstValue("sub");
+            var result = await _orderService.GetOrderDetailAsync(orderId, userId, isAdminOrStaff: false);
+
+            if (result == null) return NotFound("Không tìm thấy đơn hàng.");
+            return Ok(result);
+        }
     }
 }

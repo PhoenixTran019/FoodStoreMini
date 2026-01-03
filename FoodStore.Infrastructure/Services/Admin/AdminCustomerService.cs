@@ -29,21 +29,28 @@ namespace FoodStore.Infrastructure.Services.Admin
         //==========Service to get all customers===========
         public async Task<List<CustomerAdminDto>> GetAllCustomersAsync()
         {
-            //Join Users table to get customer details
             return await _context.Users
+                // 1. Join với bảng Roles để biết ai là Customer
+                .Join(_context.Roles,
+                    u => u.RoleId,
+                    r => r.RoleId,
+                    (u, r) => new { u, r })
+                // 2. Lọc chỉ lấy những người có RoleName là Customer
+                .Where(x => x.r.RoleName == "Customer")
+                // 3. Join với bảng UserProfiles để lấy thông tin chi tiết
                 .Join(_context.UserProfiles,
-                    u => u.UserId,
+                    combined => combined.u.UserId,
                     p => p.UserId,
-                    (u, p) => new CustomerAdminDto
+                    (combined, p) => new CustomerAdminDto
                     {
-                        userID = u.UserId,
-                        UserName = u.Username,
+                        userID = combined.u.UserId,
+                        UserName = combined.u.Username,
                         FullName = p.FirstName + " " + p.LastName,
                         Email = p.Email,
-                        PhoneNumber = u.PhoneNumber,
+                        PhoneNumber = combined.u.PhoneNumber,
                         Address = p.Address,
-                        IsActive = u.IsActive,
-                        CreateAt = u.CreateAt ?? DateTime.Now
+                        IsActive = combined.u.IsActive,
+                        CreateAt = combined.u.CreateAt ?? DateTime.Now
                     })
                 .ToListAsync();
         }

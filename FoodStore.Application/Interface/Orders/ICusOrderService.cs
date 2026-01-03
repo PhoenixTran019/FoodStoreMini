@@ -9,12 +9,15 @@ namespace FoodStore.Application.Interface.Orders
 {
     public interface ICusOrderService
     {
-        Task<string> CreateOrderAsync(CreateOrderRequestDto request);
+        Task<string> CreateOrderAsync(CreateOrderRequestDto request, string customerID);
 
-        Task<List<OrderHistoryDto>> GetMyOrderHistoryAsync();
+        Task<List<OrderHistoryDto>> GetActiveOrdersAsync(string customerID);
 
-        Task<OrderFullResponseDto> GetOrderDetailAsync(string orderId);
+        Task<List<OrderHistoryDto>> GetMyOrderHistoryAsync(string customerID);
 
-        
+        Task<OrderFullResponseDto> GetOrderDetailAsync(string orderId, string? customerID = null, bool isAdminOrStaff = false);
+
+
+
     }
 }

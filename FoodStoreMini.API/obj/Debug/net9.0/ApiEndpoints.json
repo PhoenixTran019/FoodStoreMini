@@ -54,8 +54,8 @@
   },
   {
     "ContainingType": "FoodStoreMini.API.Controllers.OdersCon.AdminOrderController",
-    "Method": "GetPendingOrders",
-    "RelativePath": "api/AdminOrder/admin/pending-orders",
+    "Method": "GetAdminActiveOrders",
+    "RelativePath": "api/AdminOrder/admin/active-orders",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -64,14 +64,30 @@
   },
   {
     "ContainingType": "FoodStoreMini.API.Controllers.OdersCon.AdminOrderController",
-    "Method": "GetByCustomer",
-    "RelativePath": "api/AdminOrder/history/customer/{profileId}",
+    "Method": "GetAdminDetail",
+    "RelativePath": "api/AdminOrder/detail/{orderId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "profileId",
+        "Name": "orderId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreMini.API.Controllers.OdersCon.AdminOrderController",
+    "Method": "GetByCustomer",
+    "RelativePath": "api/AdminOrder/history/customer/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
         "Type": "System.String",
         "IsRequired": true
       }
@@ -97,6 +113,16 @@
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreMini.API.Controllers.OdersCon.CustomerOrderController",
+    "Method": "GetActiveOrders",
+    "RelativePath": "api/CustomerOrder/active-orders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -133,7 +159,17 @@
   },
   {
     "ContainingType": "FoodStoreMini.API.Controllers.OdersCon.CustomerOrderController",
-    "Method": "GetOrderDetail",
+    "Method": "GetMyOrderHistory",
+    "RelativePath": "api/CustomerOrder/my-orders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreMini.API.Controllers.OdersCon.CustomerOrderController",
+    "Method": "GetDetail",
     "RelativePath": "api/CustomerOrder/Order-detail/{orderId}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -151,6 +187,16 @@
     "ContainingType": "FoodStoreMini.API.Controllers.Helpers.HelperController",
     "Method": "GetAvailableShippers",
     "RelativePath": "api/Helper/AvailableShippers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreMini.API.Controllers.Helpers.HelperController",
+    "Method": "GetFoodCategories",
+    "RelativePath": "api/Helper/Food-Categories",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -265,7 +311,7 @@
       },
       {
         "Name": "Items",
-        "Type": "System.Collections.Generic.List\u00601[[FoodStore.Application.DTOs.Foods.ComboDetailRequestDto, FoodStore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.String",
         "IsRequired": false
       },
       {
@@ -284,6 +330,74 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreMini.API.Controllers.Menu.MenuController",
+    "Method": "GetComboDetail",
+    "RelativePath": "api/Menu/combos/{comboId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "comboId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FoodStore.Application.DTOs.Foods.ComboResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FoodStoreMini.API.Controllers.Menu.MenuController",
+    "Method": "AddItemToCombo",
+    "RelativePath": "api/Menu/combos/{comboId}/items",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "comboId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "FoodStore.Application.DTOs.Foods.ComboDetailRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreMini.API.Controllers.Menu.MenuController",
+    "Method": "RemoveItemFromCombo",
+    "RelativePath": "api/Menu/combos/{comboId}/items/{foodId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "comboId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "foodId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -321,7 +435,7 @@
       },
       {
         "Name": "Items",
-        "Type": "System.Collections.Generic.List\u00601[[FoodStore.Application.DTOs.Foods.ComboDetailRequestDto, FoodStore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.String",
         "IsRequired": false
       },
       {
@@ -392,6 +506,32 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreMini.API.Controllers.Menu.MenuController",
+    "Method": "GetFoodDetail",
+    "RelativePath": "api/Menu/foods/{foodId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "foodId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FoodStore.Application.DTOs.Foods.FoodItemResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "FoodStoreMini.API.Controllers.Menu.MenuController",

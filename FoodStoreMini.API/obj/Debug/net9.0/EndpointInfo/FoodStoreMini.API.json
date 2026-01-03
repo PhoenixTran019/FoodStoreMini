@@ -67,7 +67,7 @@
         }
       }
     },
-    "/api/AdminOrder/admin/pending-orders": {
+    "/api/AdminOrder/admin/active-orders": {
       "get": {
         "tags": [
           "AdminOrder"
@@ -120,14 +120,36 @@
         }
       }
     },
-    "/api/AdminOrder/history/customer/{profileId}": {
+    "/api/AdminOrder/detail/{orderId}": {
       "get": {
         "tags": [
           "AdminOrder"
         ],
         "parameters": [
           {
-            "name": "profileId",
+            "name": "orderId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/AdminOrder/history/customer/{userId}": {
+      "get": {
+        "tags": [
+          "AdminOrder"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
             "in": "path",
             "required": true,
             "schema": {
@@ -259,6 +281,18 @@
         }
       }
     },
+    "/api/CustomerOrder/active-orders": {
+      "get": {
+        "tags": [
+          "CustomerOrder"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/CustomerOrder/CheckOrderStatus/{orderId}": {
       "get": {
         "tags": [
@@ -273,6 +307,18 @@
               "type": "string"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CustomerOrder/my-orders": {
+      "get": {
+        "tags": [
+          "CustomerOrder"
         ],
         "responses": {
           "200": {
@@ -315,6 +361,18 @@
         }
       }
     },
+    "/api/Helper/Food-Categories": {
+      "get": {
+        "tags": [
+          "Helper"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Helper/AvailableShippers": {
       "get": {
         "tags": [
@@ -339,6 +397,45 @@
         }
       }
     },
+    "/api/Menu/foods/{foodId}": {
+      "get": {
+        "tags": [
+          "Menu"
+        ],
+        "parameters": [
+          {
+            "name": "foodId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FoodItemResponseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FoodItemResponseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FoodItemResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Menu/create-food": {
       "post": {
         "tags": [
@@ -346,7 +443,7 @@
         ],
         "requestBody": {
           "content": {
-            "mutipart/form-data": {
+            "multipart/form-data": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -533,6 +630,45 @@
         }
       }
     },
+    "/api/Menu/combos/{comboId}": {
+      "get": {
+        "tags": [
+          "Menu"
+        ],
+        "parameters": [
+          {
+            "name": "comboId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ComboResponseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ComboResponseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ComboResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Menu/create-combo": {
       "post": {
         "tags": [
@@ -561,10 +697,7 @@
                     "type": "boolean"
                   },
                   "Items": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/ComboDetailRequestDto"
-                    }
+                    "type": "string"
                   },
                   "image": {
                     "type": "string",
@@ -598,6 +731,77 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Menu/combos/{comboId}/items": {
+      "post": {
+        "tags": [
+          "Menu"
+        ],
+        "parameters": [
+          {
+            "name": "comboId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComboDetailRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComboDetailRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComboDetailRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Menu/combos/{comboId}/items/{foodId}": {
+      "delete": {
+        "tags": [
+          "Menu"
+        ],
+        "parameters": [
+          {
+            "name": "comboId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "foodId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -643,10 +847,7 @@
                     "type": "boolean"
                   },
                   "Items": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/ComboDetailRequestDto"
-                    }
+                    "type": "string"
                   },
                   "image": {
                     "type": "string",
@@ -758,9 +959,51 @@
             "type": "string",
             "nullable": true
           },
+          "foodName": {
+            "type": "string",
+            "nullable": true
+          },
           "quantity": {
             "type": "integer",
             "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ComboResponseDto": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ComboDetailRequestDto"
+            },
+            "nullable": true
+          },
+          "comboID": {
+            "type": "string",
+            "nullable": true
+          },
+          "comboName": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "imageURL": {
+            "type": "string",
+            "nullable": true
+          },
+          "isAvailable": {
+            "type": "boolean",
             "nullable": true
           }
         },
@@ -782,6 +1025,41 @@
             "items": {
               "$ref": "#/components/schemas/OrderDetailRequestDto"
             },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FoodItemResponseDto": {
+        "type": "object",
+        "properties": {
+          "foodName": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "isAvailable": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "categoryID": {
+            "type": "string",
+            "nullable": true
+          },
+          "foodID": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageURL": {
+            "type": "string",
             "nullable": true
           }
         },

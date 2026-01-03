@@ -36,6 +36,7 @@ namespace FoodStore.Infrastructure.Services.Auths
 
                 //Authorization role
                 new Claim(ClaimTypes.Role, roleName),
+                new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
 
                 // KEY POINT: Save the ProfileId to the token.
                 // Later, if you want to know which Profile the user is working on, just decrypt the token.

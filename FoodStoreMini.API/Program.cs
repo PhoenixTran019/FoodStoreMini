@@ -10,11 +10,14 @@ using FoodStore.Infrastructure.Services.Menu;
 using FoodStore.Infrastructure.Services.Orders;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
+using System.IdentityModel.Tokens.Jwt;
 
 
+JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 var builder = WebApplication.CreateBuilder(args);
 
 //Cấu hình DBContext với SQL Server
@@ -100,6 +103,7 @@ builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IMenuService, MenuService>();
 builder.Services.AddScoped<IAdminCustomerService, AdminCustomerService>();
 builder.Services.AddScoped<ICusOrderService, CusOrderService>();
+builder.Services.AddScoped<IAdminOrderService, AdminOrderService>();
 
 
 // 3. Cấu hình Authentication (Bắt buộc)
@@ -136,6 +140,18 @@ if (app.Environment.IsDevelopment())
         options.RoutePrefix = "swagger"; // Đường dẫn truy cập sẽ là localhost:xxxx/swagger
     });
 }
+
+string uploadPath = Path.Combine(builder.Environment.ContentRootPath, "..", "FoodStore.Uploads", "uploads");
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(uploadPath),
+    RequestPath = "/uploads"
+});
+
+app.UseRouting();
+
+app.UseCors("AllowAll");
 
 app.UseHttpsRedirection();
 

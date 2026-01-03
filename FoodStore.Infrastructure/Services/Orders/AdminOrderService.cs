@@ -26,7 +26,7 @@ namespace FoodStore.Infrastructure.Services.Orders
         }
 
         //============SERVICE TO UPDATE ORDER STATUS==========
-        public async Task<bool> UpdateOrderStatusAsync(string orderId, UpdateOrderStatusDto request)
+        public async Task<bool> UpdateOrderStatusAsync(string orderId, UpdateOrderStatusDto request, string userID)
         {
             // 1. Tìm đơn hàng
             var order = await _context.Orders.FindAsync(orderId);
@@ -47,8 +47,6 @@ namespace FoodStore.Infrastructure.Services.Orders
                 throw new Exception($"Trạng thái {newStatus.StatusName} bắt buộc phải có lý do.");
             }
 
-            var actonId = _httpContext.HttpContext?.User?.FindFirstValue("ProfileId");
-
             using var trans = await _context.Database.BeginTransactionAsync();
             try
             {
@@ -66,7 +64,6 @@ namespace FoodStore.Infrastructure.Services.Orders
                     TrackingId = Uuidv7Generator.NewUuid7().ToString(),
                     OrderId = order.OrderId,
                     StatusId = request.NewStatusID,
-                    UpdateTime = DateTime.UtcNow,
                     // Ghi nhận lý do vào đây để Khách hàng xem được trong Timeline
                     StaffNote = request.StaffNote
                 };
@@ -76,8 +73,9 @@ namespace FoodStore.Infrastructure.Services.Orders
                 _context.ActivityLogs.Add(new ActivityLog
                 {
                     LogId = Uuidv7Generator.NewUuid7().ToString(),
-                    UserId = actonId,
-                    Action = $"Update Order Status to {newStatus.StatusName}. Reason: {request.StaffNote}",
+                    UserId = userID,
+                    Action = $"Update Order Status to Reason: {request.StaffNote}. Oreder: {request.OrderID}",
+                    TargetName = $"Update Order Status to {newStatus.StatusName}.",
                     TagetTable = "Orders",
                     TargetId = order.OrderId,
                     TimeStamp = DateTime.UtcNow
@@ -94,25 +92,60 @@ namespace FoodStore.Infrastructure.Services.Orders
             }
         }
 
+        //==========SERVICE TO GET ORDER BY STATUST===========
+        public async Task<List<OrderHistoryDto>> GetOrdersByStatusAsync(List<string> statusNames, string? customerId = null)
+        {
+            // Chuẩn hóa danh sách trạng thái để tránh lỗi khoảng trắng/hoa thường
+            var normalizedStatuses = statusNames.Select(s => s.Trim().ToUpper()).ToList();
+
+            var query = _context.Orders
+                .Join(_context.OrderStatuses, o => o.StatusId, s => s.StatusId, (o, s) => new { o, s })
+                .Where(x => normalizedStatuses.Contains(x.s.StatusName.Trim().ToUpper()));
+
+            // Nếu truyền customerId thì lọc theo khách, nếu không thì lấy hết (Admin)
+            if (!string.IsNullOrEmpty(customerId))
+            {
+                query = query.Where(x => x.o.CustomerId == customerId);
+            }
+
+            return await query
+                .Select(x => new OrderHistoryDto
+                {
+                    OrderID = x.o.OrderId,
+                    OrderDate = x.o.OrderDate,
+                    TotalAmount = x.o.TotalAmout ?? 0,
+                    StatusName = x.s.StatusName.Trim(),
+                    DeliveryAddress = x.o.DeliveryAddress
+                })
+                .OrderByDescending(x => x.OrderDate)
+                .ToListAsync();
+        }
+
         // 5.2 ADMIN: Xem lịch sử của 1 khách hàng cụ thể dựa trên ProfileID
-        public async Task<List<OrderHistoryDto>> GetOrdersByCustomerAsync(string customerProfileId)
+        public async Task<List<OrderHistoryDto>> GetOrdersByCustomerAsync(string userId)
         {
             // Tìm UserId từ ProfileID (vì trong bảng Orders lưu CustomerID là UserId)
-            var user = await _context.UserProfiles
-                .FirstOrDefaultAsync(p => p.ProfileId == customerProfileId);
+            // 1. Kiểm tra User có tồn tại không
+            var userExists = await _context.Users.AnyAsync(u => u.UserId == userId);
+            if (!userExists) return new List<OrderHistoryDto>();
 
-            if (user == null) return new List<OrderHistoryDto>();
+            var profile = await _context.UserProfiles.FirstOrDefaultAsync(p => p.UserId == userId);
 
             return await _context.Orders
-                .Where(o => o.CustomerId == user.UserId)
-                .Join(_context.OrderStatuses, o => o.StatusId, s => s.StatusId, (o, s) => new OrderHistoryDto
-                {
-                    OrderID = o.OrderId,
-                    OrderDate = o.OrderDate,
-                    TotalAmount = o.TotalAmout,
-                    StatusName = s.StatusName,
-                    CustomerFullName = user.FirstName + " " + user.LastName
-                })
+                .Where(o => o.CustomerId == userId)
+                .Join(_context.OrderStatuses,
+                    o => o.StatusId,
+                    s => s.StatusId,
+                    (o, s) => new OrderHistoryDto
+                    {
+                        OrderID = o.OrderId,
+                        OrderDate = o.OrderDate,
+                        TotalAmount = o.TotalAmout ?? 0,
+                        StatusName = s.StatusName.Trim(),
+                        // Nếu không có profile thì hiện UserId hoặc N/A
+                        CustomerFullName = profile != null ? $"{profile.FirstName} {profile.LastName}" : "N/A"
+                    })
+                .OrderByDescending(o => o.OrderDate)
                 .ToListAsync();
         }
 
@@ -121,15 +154,21 @@ namespace FoodStore.Infrastructure.Services.Orders
         {
             return await _context.Orders
                 .Where(o => o.OrderDate >= start && o.OrderDate <= end)
-                .Join(_context.OrderStatuses, o => o.StatusId, s => s.StatusId, (o, s) => new { o, s })
-                .Join(_context.UserProfiles, combined => combined.o.CustomerId, p => p.UserId, (combined, p) => new OrderHistoryDto
-                {
-                    OrderID = combined.o.OrderId,
-                    OrderDate = combined.o.OrderDate,
-                    TotalAmount = combined.o.TotalAmout,
-                    StatusName = combined.s.StatusName,
-                    CustomerFullName = p.FirstName + " " + p.LastName
-                })
+                .Join(_context.OrderStatuses,
+                    o => o.StatusId,
+                    s => s.StatusId,
+                    (o, s) => new { o, s })
+                .Join(_context.UserProfiles,
+                    combined => combined.o.CustomerId,
+                    p => p.UserId,
+                    (combined, p) => new OrderHistoryDto
+                    {
+                        OrderID = combined.o.OrderId,
+                        OrderDate = combined.o.OrderDate,
+                        TotalAmount = combined.o.TotalAmout ?? 0,
+                        StatusName = combined.s.StatusName.Trim(),
+                        CustomerFullName = $"{p.FirstName} {p.LastName}"
+                    })
                 .OrderByDescending(x => x.OrderDate)
                 .ToListAsync();
         }

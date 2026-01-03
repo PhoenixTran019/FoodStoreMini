@@ -3,16 +3,124 @@
   "WorkspaceRootPath": "D:\\FoodStoreMini\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|d:\\foodstoremini\\foodstore.infrastructure\\services\\admin\\admincustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|solutionrelative:foodstore.infrastructure\\services\\admin\\admincustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\admin\\customeradmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\admin\\customeradmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|d:\\foodstoremini\\foodstore.infrastructure\\services\\orders\\adminorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|solutionrelative:foodstore.infrastructure\\services\\orders\\adminorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|d:\\foodstoremini\\foodstoremini.api\\controllers\\oderscon\\adminordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|solutionrelative:foodstoremini.api\\controllers\\oderscon\\adminordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|d:\\foodstoremini\\foodstoremini.api\\controllers\\admin\\customermanagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|solutionrelative:foodstoremini.api\\controllers\\admin\\customermanagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|d:\\foodstoremini\\foodstoremini.api\\controllers\\auth\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|solutionrelative:foodstoremini.api\\controllers\\auth\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\interface\\admin\\iadmincustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\interface\\admin\\iadmincustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\interface\\orders\\iadminorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\interface\\orders\\iadminorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|d:\\foodstoremini\\foodstore.infrastructure\\services\\orders\\cusorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|solutionrelative:foodstore.infrastructure\\services\\orders\\cusorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|d:\\foodstoremini\\foodstoremini.api\\controllers\\oderscon\\customerordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|solutionrelative:foodstoremini.api\\controllers\\oderscon\\customerordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|d:\\foodstoremini\\foodstoremini.api\\controllers\\helper\\helpercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|solutionrelative:foodstoremini.api\\controllers\\helper\\helpercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|d:\\foodstoremini\\foodstoremini.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|solutionrelative:foodstoremini.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\interface\\orders\\icusorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\interface\\orders\\icusorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\foods\\comboresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\foods\\comboresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\orders\\orderhistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\orders\\orderhistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\orders\\updateorderstatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\orders\\updateorderstatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|d:\\foodstoremini\\foodstoremini.api\\controllers\\menu\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|solutionrelative:foodstoremini.api\\controllers\\menu\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|d:\\foodstoremini\\foodstore.infrastructure\\services\\menu\\menuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|solutionrelative:foodstore.infrastructure\\services\\menu\\menuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\interface\\menu\\imenuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\interface\\menu\\imenuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|d:\\foodstoremini\\foodstore.infrastructure\\services\\auths\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|solutionrelative:foodstore.infrastructure\\services\\auths\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\auth\\jwtoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\auth\\jwtoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\orders\\ordertrackingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\orders\\ordertrackingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\orders\\orderfullresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\orders\\orderfullresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\foods\\comboupsertdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\foods\\comboupsertdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\foods\\combodetailrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\foods\\combodetailrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\foods\\fooditemupsertdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\foods\\fooditemupsertdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\common\\helper\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\common\\helper\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F90C66B-6ADD-9878-17D1-37F384DBFCD3}|FoodStore.Domain\\FoodStore.Domain.csproj|d:\\foodstoremini\\foodstore.domain\\entities\\combodetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F90C66B-6ADD-9878-17D1-37F384DBFCD3}|FoodStore.Domain\\FoodStore.Domain.csproj|solutionrelative:foodstore.domain\\entities\\combodetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\auths\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\auths\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|d:\\foodstoremini\\foodstore.infrastructure\\services\\auths\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|solutionrelative:foodstore.infrastructure\\services\\auths\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\foods\\fooditemresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\foods\\fooditemresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\interface\\auth\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,143 +135,15 @@
       "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\auths\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\orders\\updateorderstatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\orders\\updateorderstatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|d:\\foodstoremini\\foodstore.infrastructure\\services\\orders\\adminorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|solutionrelative:foodstore.infrastructure\\services\\orders\\adminorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|d:\\foodstoremini\\foodstoremini.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|solutionrelative:foodstoremini.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|d:\\foodstoremini\\foodstore.infrastructure\\services\\auths\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|solutionrelative:foodstore.infrastructure\\services\\auths\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\common\\helper\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\common\\helper\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|d:\\foodstoremini\\foodstoremini.api\\controllers\\oderscon\\adminordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|solutionrelative:foodstoremini.api\\controllers\\oderscon\\adminordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|d:\\foodstoremini\\foodstoremini.api\\controllers\\oderscon\\customerordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|solutionrelative:foodstoremini.api\\controllers\\oderscon\\customerordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|d:\\foodstoremini\\foodstore.infrastructure\\services\\orders\\cusorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|solutionrelative:foodstore.infrastructure\\services\\orders\\cusorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\foods\\comboupsertdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\foods\\comboupsertdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8F90C66B-6ADD-9878-17D1-37F384DBFCD3}|FoodStore.Domain\\FoodStore.Domain.csproj|d:\\foodstoremini\\foodstore.domain\\entities\\ordertracking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8F90C66B-6ADD-9878-17D1-37F384DBFCD3}|FoodStore.Domain\\FoodStore.Domain.csproj|solutionrelative:foodstore.domain\\entities\\ordertracking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\interface\\orders\\icusorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\interface\\orders\\icusorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\interface\\admin\\iadmincustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\interface\\admin\\iadmincustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8F90C66B-6ADD-9878-17D1-37F384DBFCD3}|FoodStore.Domain\\FoodStore.Domain.csproj|d:\\foodstoremini\\foodstore.domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F90C66B-6ADD-9878-17D1-37F384DBFCD3}|FoodStore.Domain\\FoodStore.Domain.csproj|solutionrelative:foodstore.domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|d:\\foodstoremini\\foodstoremini.api\\controllers\\admin\\customermanagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|solutionrelative:foodstoremini.api\\controllers\\admin\\customermanagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\orders\\ordertrackingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\orders\\ordertrackingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\orders\\orderfullresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\orders\\orderfullresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\orders\\orderhistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\orders\\orderhistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\interface\\orders\\iadminorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\interface\\orders\\iadminorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\orders\\orderdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\orders\\orderdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\orders\\orderdetailrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\orders\\orderdetailrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\orders\\createorderrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\orders\\createorderrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8F90C66B-6ADD-9878-17D1-37F384DBFCD3}|FoodStore.Domain\\FoodStore.Domain.csproj|d:\\foodstoremini\\foodstore.domain\\entities\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8F90C66B-6ADD-9878-17D1-37F384DBFCD3}|FoodStore.Domain\\FoodStore.Domain.csproj|solutionrelative:foodstore.domain\\entities\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|d:\\foodstoremini\\foodstoremini.api\\controllers\\helper\\helpercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|solutionrelative:foodstoremini.api\\controllers\\helper\\helpercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\lmsMiniIHUTECH\\LmsMini.Api\\Controllers\\StudentClassroomController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|d:\\foodstoremini\\foodstore.infrastructure\\services\\menu\\menuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|solutionrelative:foodstore.infrastructure\\services\\menu\\menuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|d:\\foodstoremini\\foodstore.infrastructure\\services\\admin\\admincustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA40700E-7590-F19B-7961-C7006600E7C1}|FoodStore.Infrastructure\\FoodStore.Infrastructure.csproj|solutionrelative:foodstore.infrastructure\\services\\admin\\admincustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\auths\\registercustomerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\auths\\registercustomerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\admin\\customeradmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\admin\\customeradmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\foods\\combodetailrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\foods\\combodetailrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\auth\\jwtoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\auth\\jwtoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|d:\\foodstoremini\\foodstoremini.api\\controllers\\menu\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|solutionrelative:foodstoremini.api\\controllers\\menu\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|d:\\foodstoremini\\foodstoremini.api\\foodstoremini.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{969C919C-B0DF-38E7-0927-226A3CDB65EB}|FoodStoreMini.API\\FoodStoreMini.API.csproj|solutionrelative:foodstoremini.api\\foodstoremini.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\foods\\comboresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\foods\\comboresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\interface\\menu\\imenuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\interface\\menu\\imenuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|d:\\foodstoremini\\foodstore.application\\dtos\\foods\\fooditemupsertdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D07C3AA-13A0-FCEF-D49E-4735EE866F8F}|FoodStore.Application\\FoodStore.Application.csproj|solutionrelative:foodstore.application\\dtos\\foods\\fooditemupsertdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -173,7 +153,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -185,98 +165,188 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthResponseDto.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Auths\\AuthResponseDto.cs",
-              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Auths\\AuthResponseDto.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Auths\\AuthResponseDto.cs",
-              "RelativeToolTip": "FoodStore.Application\\DTOs\\Auths\\AuthResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T17:59:04.991Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AccountService.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Infrastructure\\Services\\Auths\\AccountService.cs",
-              "RelativeDocumentMoniker": "FoodStore.Infrastructure\\Services\\Auths\\AccountService.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Infrastructure\\Services\\Auths\\AccountService.cs",
-              "RelativeToolTip": "FoodStore.Infrastructure\\Services\\Auths\\AccountService.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAYwFIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T17:51:42.897Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\Auth\\AccountController.cs",
-              "RelativeDocumentMoniker": "FoodStoreMini.API\\Controllers\\Auth\\AccountController.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\Auth\\AccountController.cs",
-              "RelativeToolTip": "FoodStoreMini.API\\Controllers\\Auth\\AccountController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA+wC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T03:18:53.742Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IAccountService.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\Interface\\Auth\\IAccountService.cs",
-              "RelativeDocumentMoniker": "FoodStore.Application\\Interface\\Auth\\IAccountService.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\Interface\\Auth\\IAccountService.cs",
-              "RelativeToolTip": "FoodStore.Application\\Interface\\Auth\\IAccountService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T17:51:28.823Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Auths\\LoginDto.cs",
-              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Auths\\LoginDto.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Auths\\LoginDto.cs",
-              "RelativeToolTip": "FoodStore.Application\\DTOs\\Auths\\LoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T17:58:00.776Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LoginResponseDto.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Auths\\LoginResponseDto.cs",
-              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Auths\\LoginResponseDto.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Auths\\LoginResponseDto.cs",
-              "RelativeToolTip": "FoodStore.Application\\DTOs\\Auths\\LoginResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T19:32:24.326Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "AdminOrderService.cs",
               "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Infrastructure\\Services\\Orders\\AdminOrderService.cs",
               "RelativeDocumentMoniker": "FoodStore.Infrastructure\\Services\\Orders\\AdminOrderService.cs",
               "ToolTip": "D:\\FoodStoreMini\\FoodStore.Infrastructure\\Services\\Orders\\AdminOrderService.cs",
               "RelativeToolTip": "FoodStore.Infrastructure\\Services\\Orders\\AdminOrderService.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAwwE8AAABoAAAAAAAAAA==",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAiwHsAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T01:10:49.786Z",
+              "WhenOpened": "2025-12-30T13:56:12.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminCustomerService.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Infrastructure\\Services\\Admin\\AdminCustomerService.cs",
+              "RelativeDocumentMoniker": "FoodStore.Infrastructure\\Services\\Admin\\AdminCustomerService.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Infrastructure\\Services\\Admin\\AdminCustomerService.cs",
+              "RelativeToolTip": "FoodStore.Infrastructure\\Services\\Admin\\AdminCustomerService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-01T04:15:17.637Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerAdminDto.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Admin\\CustomerAdminDto.cs",
+              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Admin\\CustomerAdminDto.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Admin\\CustomerAdminDto.cs",
+              "RelativeToolTip": "FoodStore.Application\\DTOs\\Admin\\CustomerAdminDto.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T19:44:16.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminOrderController.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\OdersCon\\AdminOrderController.cs",
+              "RelativeDocumentMoniker": "FoodStoreMini.API\\Controllers\\OdersCon\\AdminOrderController.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\OdersCon\\AdminOrderController.cs",
+              "RelativeToolTip": "FoodStoreMini.API\\Controllers\\OdersCon\\AdminOrderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T14:06:29.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerManageController.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\Admin\\CustomerManageController.cs",
+              "RelativeDocumentMoniker": "FoodStoreMini.API\\Controllers\\Admin\\CustomerManageController.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\Admin\\CustomerManageController.cs",
+              "RelativeToolTip": "FoodStoreMini.API\\Controllers\\Admin\\CustomerManageController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-01T12:05:09.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\Auth\\AccountController.cs",
+              "RelativeDocumentMoniker": "FoodStoreMini.API\\Controllers\\Auth\\AccountController.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\Auth\\AccountController.cs",
+              "RelativeToolTip": "FoodStoreMini.API\\Controllers\\Auth\\AccountController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAmwBkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T03:18:53.742Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "IAdminCustomerService.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\Interface\\Admin\\IAdminCustomerService.cs",
+              "RelativeDocumentMoniker": "FoodStore.Application\\Interface\\Admin\\IAdminCustomerService.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\Interface\\Admin\\IAdminCustomerService.cs",
+              "RelativeToolTip": "FoodStore.Application\\Interface\\Admin\\IAdminCustomerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T19:53:23.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IAdminOrderService.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\Interface\\Orders\\IAdminOrderService.cs",
+              "RelativeDocumentMoniker": "FoodStore.Application\\Interface\\Orders\\IAdminOrderService.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\Interface\\Orders\\IAdminOrderService.cs",
+              "RelativeToolTip": "FoodStore.Application\\Interface\\Orders\\IAdminOrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T01:09:42.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStoreMini.API\\Program.cs",
+              "RelativeDocumentMoniker": "FoodStoreMini.API\\Program.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStoreMini.API\\Program.cs",
+              "RelativeToolTip": "FoodStoreMini.API\\Program.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAC4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T14:22:25.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HelperController.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\Helper\\HelperController.cs",
+              "RelativeDocumentMoniker": "FoodStoreMini.API\\Controllers\\Helper\\HelperController.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\Helper\\HelperController.cs",
+              "RelativeToolTip": "FoodStoreMini.API\\Controllers\\Helper\\HelperController.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAgwDwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T15:03:54.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CusOrderService.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Infrastructure\\Services\\Orders\\CusOrderService.cs",
+              "RelativeDocumentMoniker": "FoodStore.Infrastructure\\Services\\Orders\\CusOrderService.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Infrastructure\\Services\\Orders\\CusOrderService.cs",
+              "RelativeToolTip": "FoodStore.Infrastructure\\Services\\Orders\\CusOrderService.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAuwKQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T08:52:54.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CustomerOrderController.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\OdersCon\\CustomerOrderController.cs",
+              "RelativeDocumentMoniker": "FoodStoreMini.API\\Controllers\\OdersCon\\CustomerOrderController.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\OdersCon\\CustomerOrderController.cs",
+              "RelativeToolTip": "FoodStoreMini.API\\Controllers\\OdersCon\\CustomerOrderController.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAkwHUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T13:57:51.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ComboResponseDto.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Foods\\ComboResponseDto.cs",
+              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Foods\\ComboResponseDto.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Foods\\ComboResponseDto.cs",
+              "RelativeToolTip": "FoodStore.Application\\DTOs\\Foods\\ComboResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T10:09:09.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ICusOrderService.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\Interface\\Orders\\ICusOrderService.cs",
+              "RelativeDocumentMoniker": "FoodStore.Application\\Interface\\Orders\\ICusOrderService.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\Interface\\Orders\\ICusOrderService.cs",
+              "RelativeToolTip": "FoodStore.Application\\Interface\\Orders\\ICusOrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBEAAAB/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T10:28:36.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "OrderHistoryDto.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Orders\\OrderHistoryDto.cs",
+              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Orders\\OrderHistoryDto.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Orders\\OrderHistoryDto.cs",
+              "RelativeToolTip": "FoodStore.Application\\DTOs\\Orders\\OrderHistoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T13:46:52.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "UpdateOrderStatusDto.cs",
               "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Orders\\UpdateOrderStatusDto.cs",
               "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Orders\\UpdateOrderStatusDto.cs",
@@ -284,103 +354,215 @@
               "RelativeToolTip": "FoodStore.Application\\DTOs\\Orders\\UpdateOrderStatusDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T01:07:55.121Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-27T01:07:55.121Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStoreMini.API\\Program.cs",
-              "RelativeDocumentMoniker": "FoodStoreMini.API\\Program.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStoreMini.API\\Program.cs",
-              "RelativeToolTip": "FoodStoreMini.API\\Program.cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAAwJMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 16,
+              "Title": "MenuController.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\Menu\\MenuController.cs",
+              "RelativeDocumentMoniker": "FoodStoreMini.API\\Controllers\\Menu\\MenuController.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\Menu\\MenuController.cs",
+              "RelativeToolTip": "FoodStoreMini.API\\Controllers\\Menu\\MenuController.cs",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAuwM8AAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T17:59:36.311Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T03:20:11.183Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 20,
+              "Title": "JwtOptions.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\Auth\\JwtOptions.cs",
+              "RelativeDocumentMoniker": "FoodStore.Application\\Auth\\JwtOptions.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\Auth\\JwtOptions.cs",
+              "RelativeToolTip": "FoodStore.Application\\Auth\\JwtOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T13:01:53.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "OrderTrackingDto.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Orders\\OrderTrackingDto.cs",
+              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Orders\\OrderTrackingDto.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Orders\\OrderTrackingDto.cs",
+              "RelativeToolTip": "FoodStore.Application\\DTOs\\Orders\\OrderTrackingDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T01:07:00.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IMenuService.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\Interface\\Menu\\IMenuService.cs",
+              "RelativeDocumentMoniker": "FoodStore.Application\\Interface\\Menu\\IMenuService.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\Interface\\Menu\\IMenuService.cs",
+              "RelativeToolTip": "FoodStore.Application\\Interface\\Menu\\IMenuService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T02:43:37.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MenuService.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Infrastructure\\Services\\Menu\\MenuService.cs",
+              "RelativeDocumentMoniker": "FoodStore.Infrastructure\\Services\\Menu\\MenuService.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Infrastructure\\Services\\Menu\\MenuService.cs",
+              "RelativeToolTip": "FoodStore.Infrastructure\\Services\\Menu\\MenuService.cs",
+              "ViewState": "AgIAANkAAAAAAAAAAADwv14BAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T13:20:53.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "JwtService.cs",
               "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Infrastructure\\Services\\Auths\\JwtService.cs",
               "RelativeDocumentMoniker": "FoodStore.Infrastructure\\Services\\Auths\\JwtService.cs",
               "ToolTip": "D:\\FoodStoreMini\\FoodStore.Infrastructure\\Services\\Auths\\JwtService.cs",
               "RelativeToolTip": "FoodStore.Infrastructure\\Services\\Auths\\JwtService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAqwEgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwCYAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T20:32:22.122Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-30T13:01:57.931Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FileHelper.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\Common\\Helper\\FileHelper.cs",
-              "RelativeDocumentMoniker": "FoodStore.Application\\Common\\Helper\\FileHelper.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\Common\\Helper\\FileHelper.cs",
-              "RelativeToolTip": "FoodStore.Application\\Common\\Helper\\FileHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAA4AAAAAAAAAA==",
+              "DocumentIndex": 22,
+              "Title": "OrderFullResponseDto.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Orders\\OrderFullResponseDto.cs",
+              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Orders\\OrderFullResponseDto.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Orders\\OrderFullResponseDto.cs",
+              "RelativeToolTip": "FoodStore.Application\\DTOs\\Orders\\OrderFullResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBwAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T18:51:45.305Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-27T14:57:37.337Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AdminOrderController.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\OdersCon\\AdminOrderController.cs",
-              "RelativeDocumentMoniker": "FoodStoreMini.API\\Controllers\\OdersCon\\AdminOrderController.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\OdersCon\\AdminOrderController.cs",
-              "RelativeToolTip": "FoodStoreMini.API\\Controllers\\OdersCon\\AdminOrderController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAYwCAAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T01:28:17.674Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CustomerOrderController.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\OdersCon\\CustomerOrderController.cs",
-              "RelativeDocumentMoniker": "FoodStoreMini.API\\Controllers\\OdersCon\\CustomerOrderController.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\OdersCon\\CustomerOrderController.cs",
-              "RelativeToolTip": "FoodStoreMini.API\\Controllers\\OdersCon\\CustomerOrderController.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAgwFYAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-26T13:57:51.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CusOrderService.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Infrastructure\\Services\\Orders\\CusOrderService.cs",
-              "RelativeDocumentMoniker": "FoodStore.Infrastructure\\Services\\Orders\\CusOrderService.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Infrastructure\\Services\\Orders\\CusOrderService.cs",
-              "RelativeToolTip": "FoodStore.Infrastructure\\Services\\Orders\\CusOrderService.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAYwBwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-26T12:36:25.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 23,
               "Title": "ComboUpsertDto.cs",
               "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Foods\\ComboUpsertDto.cs",
               "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Foods\\ComboUpsertDto.cs",
               "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Foods\\ComboUpsertDto.cs",
               "RelativeToolTip": "FoodStore.Application\\DTOs\\Foods\\ComboUpsertDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T08:00:29.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T08:00:29.181Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 24,
+              "Title": "ComboDetailRequestDto.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Foods\\ComboDetailRequestDto.cs",
+              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Foods\\ComboDetailRequestDto.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Foods\\ComboDetailRequestDto.cs",
+              "RelativeToolTip": "FoodStore.Application\\DTOs\\Foods\\ComboDetailRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T08:14:01.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FoodItemUpsertDto.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Foods\\FoodItemUpsertDto.cs",
+              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Foods\\FoodItemUpsertDto.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Foods\\FoodItemUpsertDto.cs",
+              "RelativeToolTip": "FoodStore.Application\\DTOs\\Foods\\FoodItemUpsertDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T10:07:33.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AuthResponseDto.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Auths\\AuthResponseDto.cs",
+              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Auths\\AuthResponseDto.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Auths\\AuthResponseDto.cs",
+              "RelativeToolTip": "FoodStore.Application\\DTOs\\Auths\\AuthResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:59:04.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "FileHelper.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\Common\\Helper\\FileHelper.cs",
+              "RelativeDocumentMoniker": "FoodStore.Application\\Common\\Helper\\FileHelper.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\Common\\Helper\\FileHelper.cs",
+              "RelativeToolTip": "FoodStore.Application\\Common\\Helper\\FileHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T18:51:45.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ComboDetail.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Domain\\Entities\\ComboDetail.cs",
+              "RelativeDocumentMoniker": "FoodStore.Domain\\Entities\\ComboDetail.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Domain\\Entities\\ComboDetail.cs",
+              "RelativeToolTip": "FoodStore.Domain\\Entities\\ComboDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T10:39:46.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "FoodItemResponseDto.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Foods\\FoodItemResponseDto.cs",
+              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Foods\\FoodItemResponseDto.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Foods\\FoodItemResponseDto.cs",
+              "RelativeToolTip": "FoodStore.Application\\DTOs\\Foods\\FoodItemResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T06:49:28.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "LoginResponseDto.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Auths\\LoginResponseDto.cs",
+              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Auths\\LoginResponseDto.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Auths\\LoginResponseDto.cs",
+              "RelativeToolTip": "FoodStore.Application\\DTOs\\Auths\\LoginResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T19:32:24.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Auths\\LoginDto.cs",
+              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Auths\\LoginDto.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Auths\\LoginDto.cs",
+              "RelativeToolTip": "FoodStore.Application\\DTOs\\Auths\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:58:00.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IAccountService.cs",
+              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\Interface\\Auth\\IAccountService.cs",
+              "RelativeDocumentMoniker": "FoodStore.Application\\Interface\\Auth\\IAccountService.cs",
+              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\Interface\\Auth\\IAccountService.cs",
+              "RelativeToolTip": "FoodStore.Application\\Interface\\Auth\\IAccountService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T17:51:28.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
               "Title": "OrderTracking.cs",
               "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Domain\\Entities\\OrderTracking.cs",
               "RelativeDocumentMoniker": "FoodStore.Domain\\Entities\\OrderTracking.cs",
@@ -388,161 +570,11 @@
               "RelativeToolTip": "FoodStore.Domain\\Entities\\OrderTracking.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T17:08:28.663Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-27T17:08:28.663Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ICusOrderService.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\Interface\\Orders\\ICusOrderService.cs",
-              "RelativeDocumentMoniker": "FoodStore.Application\\Interface\\Orders\\ICusOrderService.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\Interface\\Orders\\ICusOrderService.cs",
-              "RelativeToolTip": "FoodStore.Application\\Interface\\Orders\\ICusOrderService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBEAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T14:18:41.936Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CustomerManageController.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\Admin\\CustomerManageController.cs",
-              "RelativeDocumentMoniker": "FoodStoreMini.API\\Controllers\\Admin\\CustomerManageController.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\Admin\\CustomerManageController.cs",
-              "RelativeToolTip": "FoodStoreMini.API\\Controllers\\Admin\\CustomerManageController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwD8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-26T11:49:51.639Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "OrderTrackingDto.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Orders\\OrderTrackingDto.cs",
-              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Orders\\OrderTrackingDto.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Orders\\OrderTrackingDto.cs",
-              "RelativeToolTip": "FoodStore.Application\\DTOs\\Orders\\OrderTrackingDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T01:07:00.7Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "IAdminCustomerService.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\Interface\\Admin\\IAdminCustomerService.cs",
-              "RelativeDocumentMoniker": "FoodStore.Application\\Interface\\Admin\\IAdminCustomerService.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\Interface\\Admin\\IAdminCustomerService.cs",
-              "RelativeToolTip": "FoodStore.Application\\Interface\\Admin\\IAdminCustomerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T19:53:23.962Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Order.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Domain\\Entities\\Order.cs",
-              "RelativeDocumentMoniker": "FoodStore.Domain\\Entities\\Order.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Domain\\Entities\\Order.cs",
-              "RelativeToolTip": "FoodStore.Domain\\Entities\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T15:40:05.34Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "OrderFullResponseDto.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Orders\\OrderFullResponseDto.cs",
-              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Orders\\OrderFullResponseDto.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Orders\\OrderFullResponseDto.cs",
-              "RelativeToolTip": "FoodStore.Application\\DTOs\\Orders\\OrderFullResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T14:57:37.337Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "OrderHistoryDto.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Orders\\OrderHistoryDto.cs",
-              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Orders\\OrderHistoryDto.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Orders\\OrderHistoryDto.cs",
-              "RelativeToolTip": "FoodStore.Application\\DTOs\\Orders\\OrderHistoryDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBYAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T13:46:52.815Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "IAdminOrderService.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\Interface\\Orders\\IAdminOrderService.cs",
-              "RelativeDocumentMoniker": "FoodStore.Application\\Interface\\Orders\\IAdminOrderService.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\Interface\\Orders\\IAdminOrderService.cs",
-              "RelativeToolTip": "FoodStore.Application\\Interface\\Orders\\IAdminOrderService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T01:09:42.925Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "OrderDetailDto.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Orders\\OrderDetailDto.cs",
-              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Orders\\OrderDetailDto.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Orders\\OrderDetailDto.cs",
-              "RelativeToolTip": "FoodStore.Application\\DTOs\\Orders\\OrderDetailDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T14:13:24.601Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "OrderDetailRequestDto.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Orders\\OrderDetailRequestDto.cs",
-              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Orders\\OrderDetailRequestDto.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Orders\\OrderDetailRequestDto.cs",
-              "RelativeToolTip": "FoodStore.Application\\DTOs\\Orders\\OrderDetailRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-26T12:32:29.361Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "CreateOrderRequestDto.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Orders\\CreateOrderRequestDto.cs",
-              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Orders\\CreateOrderRequestDto.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Orders\\CreateOrderRequestDto.cs",
-              "RelativeToolTip": "FoodStore.Application\\DTOs\\Orders\\CreateOrderRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-26T12:33:30.86Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "HelperController.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\Helper\\HelperController.cs",
-              "RelativeDocumentMoniker": "FoodStoreMini.API\\Controllers\\Helper\\HelperController.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\Helper\\HelperController.cs",
-              "RelativeToolTip": "FoodStoreMini.API\\Controllers\\Helper\\HelperController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAhwDsAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T12:14:35.251Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 34,
               "Title": "UserProfile.cs",
               "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Domain\\Entities\\UserProfile.cs",
               "RelativeDocumentMoniker": "FoodStore.Domain\\Entities\\UserProfile.cs",
@@ -554,7 +586,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 35,
               "Title": "StudentClassroomController.cs",
               "DocumentMoniker": "D:\\lmsMiniIHUTECH\\LmsMini.Api\\Controllers\\StudentClassroomController.cs",
               "RelativeDocumentMoniker": "..\\lmsMiniIHUTECH\\LmsMini.Api\\Controllers\\StudentClassroomController.cs",
@@ -563,138 +595,6 @@
               "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-27T12:08:25.513Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "MenuService.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Infrastructure\\Services\\Menu\\MenuService.cs",
-              "RelativeDocumentMoniker": "FoodStore.Infrastructure\\Services\\Menu\\MenuService.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Infrastructure\\Services\\Menu\\MenuService.cs",
-              "RelativeToolTip": "FoodStore.Infrastructure\\Services\\Menu\\MenuService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T02:45:16.508Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "AdminCustomerService.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Infrastructure\\Services\\Admin\\AdminCustomerService.cs",
-              "RelativeDocumentMoniker": "FoodStore.Infrastructure\\Services\\Admin\\AdminCustomerService.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Infrastructure\\Services\\Admin\\AdminCustomerService.cs",
-              "RelativeToolTip": "FoodStore.Infrastructure\\Services\\Admin\\AdminCustomerService.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAkwEoAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T20:03:55.429Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "CustomerAdminDto.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Admin\\CustomerAdminDto.cs",
-              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Admin\\CustomerAdminDto.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Admin\\CustomerAdminDto.cs",
-              "RelativeToolTip": "FoodStore.Application\\DTOs\\Admin\\CustomerAdminDto.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T19:44:16.091Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "RegisterCustomerDto.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Auths\\RegisterCustomerDto.cs",
-              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Auths\\RegisterCustomerDto.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Auths\\RegisterCustomerDto.cs",
-              "RelativeToolTip": "FoodStore.Application\\DTOs\\Auths\\RegisterCustomerDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T19:32:25.51Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "ComboDetailRequestDto.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Foods\\ComboDetailRequestDto.cs",
-              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Foods\\ComboDetailRequestDto.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Foods\\ComboDetailRequestDto.cs",
-              "RelativeToolTip": "FoodStore.Application\\DTOs\\Foods\\ComboDetailRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T08:14:01.895Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "JwtOptions.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\Auth\\JwtOptions.cs",
-              "RelativeDocumentMoniker": "FoodStore.Application\\Auth\\JwtOptions.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\Auth\\JwtOptions.cs",
-              "RelativeToolTip": "FoodStore.Application\\Auth\\JwtOptions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T19:32:28.062Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "MenuController.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\Menu\\MenuController.cs",
-              "RelativeDocumentMoniker": "FoodStoreMini.API\\Controllers\\Menu\\MenuController.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStoreMini.API\\Controllers\\Menu\\MenuController.cs",
-              "RelativeToolTip": "FoodStoreMini.API\\Controllers\\Menu\\MenuController.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAgwE0AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T03:20:11.183Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "FoodStoreMini.API.csproj",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStoreMini.API\\FoodStoreMini.API.csproj",
-              "RelativeDocumentMoniker": "FoodStoreMini.API\\FoodStoreMini.API.csproj",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStoreMini.API\\FoodStoreMini.API.csproj",
-              "RelativeToolTip": "FoodStoreMini.API\\FoodStoreMini.API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-25T18:58:16.976Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "IMenuService.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\Interface\\Menu\\IMenuService.cs",
-              "RelativeDocumentMoniker": "FoodStore.Application\\Interface\\Menu\\IMenuService.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\Interface\\Menu\\IMenuService.cs",
-              "RelativeToolTip": "FoodStore.Application\\Interface\\Menu\\IMenuService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T02:43:37.423Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "ComboResponseDto.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Foods\\ComboResponseDto.cs",
-              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Foods\\ComboResponseDto.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Foods\\ComboResponseDto.cs",
-              "RelativeToolTip": "FoodStore.Application\\DTOs\\Foods\\ComboResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T10:09:09.099Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "FoodItemUpsertDto.cs",
-              "DocumentMoniker": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Foods\\FoodItemUpsertDto.cs",
-              "RelativeDocumentMoniker": "FoodStore.Application\\DTOs\\Foods\\FoodItemUpsertDto.cs",
-              "ToolTip": "D:\\FoodStoreMini\\FoodStore.Application\\DTOs\\Foods\\FoodItemUpsertDto.cs",
-              "RelativeToolTip": "FoodStore.Application\\DTOs\\Foods\\FoodItemUpsertDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T10:07:33.614Z"
             }
           ]
         },

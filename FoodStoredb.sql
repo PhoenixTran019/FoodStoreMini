@@ -133,3 +133,17 @@ Create Table ActivityLogs
 	TargetName nvarchar(200),
 	TimeStamp DateTime2 Default GetDate()
 ); 
+
+SELECT DISTINCT StatusName FROM OrderStatus;
+
+SELECT OrderId, CustomerId
+FROM Orders
+WHERE CustomerId = 'GIÁ_TR? userId T? JWT';
+
+-- Thay ID b?ng cái 'sub' l?y t? token c?a b?n
+DECLARE @UserId NVARCHAR(MAX) = 'b9689b01-ccbd-26f0-aeba-68ba7723642b';
+
+SELECT o.OrderId, o.OrderDate, s.StatusName
+FROM Orders o
+JOIN OrderStatus s ON o.StatusId = s.StatusId
+WHERE o.CustomerId = @UserId;

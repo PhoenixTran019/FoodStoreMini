@@ -10,6 +10,8 @@ namespace FoodStore.Application.DTOs.Foods
     {
         public string? FoodID { get; set; }
 
+        public string? FoodName { get; set; }
+
         public int? Quantity { get; set; }
     }
 }

@@ -13,19 +13,27 @@ namespace FoodStore.Application.Interface.Menu
         //==========SERVICE CRUD FOR FOODS==========
         Task<IEnumerable<FoodItemResponseDto>> GetAllFoodsAsync();
 
-        Task<string> CreateFoodAsync(FoodItemUpsertDto dto, IFormFile image);
+        Task<FoodItemResponseDto> GetFoodItemDetailAsync(string foodId);
 
-        Task<bool> UpdateFoodAsync(string id, FoodItemUpsertDto dto, IFormFile image);
+        Task<string> CreateFoodAsync(FoodItemUpsertDto dto, IFormFile image, string userID);
 
-        Task<bool> DeleteFoodAsync(string FoodId);
+        Task<bool> UpdateFoodAsync(string id, FoodItemUpsertDto dto, IFormFile image, string userID);
+
+        Task<bool> DeleteFoodAsync(string FoodId, string userID);
 
         //==========SERVICE CRUD FOR COMBO==========
         Task<IEnumerable<ComboResponseDto>> GetAllCombosAsync();
 
-        Task<string> CreateComboAsync(ComboUpsertDto dto, IFormFile image);
+        Task<ComboResponseDto> GetComboDetailAsync(string comboId);
 
-        Task<bool> UpdateComboAsync(string id, ComboUpsertDto dto, IFormFile? image);
+        Task<bool> AddFoodToComboAsync(string comboId, ComboDetailRequestDto itemDto);
 
-        Task<bool> DeleteComboAsync(string comboId);
+        Task<bool> RemoveFoodFromComboAsync(string comboId, string foodId);
+
+        Task<string> CreateComboAsync(ComboUpsertDto dto, IFormFile image, string userID);
+
+        Task<ComboResponseDto> UpdateComboAsync(string comboId, ComboUpsertDto dto, IFormFile? image, string userID);
+
+        Task<bool> DeleteComboAsync(string comboId, string userID);
     }
 }

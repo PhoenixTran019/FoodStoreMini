@@ -13,6 +13,6 @@ namespace FoodStore.Application.DTOs.Orders
 
         public string? Note { get; set; }
 
-        public List<OrderDetailRequestDto>? Details { get; set; }
+        public List<OrderDetailRequestDto> Details { get; set; } = new List<OrderDetailRequestDto>();
     }
 }

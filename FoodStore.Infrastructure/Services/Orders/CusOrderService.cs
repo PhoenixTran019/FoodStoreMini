@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace FoodStore.Infrastructure.Services.Orders
 {
@@ -25,47 +26,52 @@ namespace FoodStore.Infrastructure.Services.Orders
             _httpContext = httpContext;
         }
 
-        public async Task<string> CreateOrderAsync(CreateOrderRequestDto request)
+        public async Task<string> CreateOrderAsync(CreateOrderRequestDto request, string customerID)
         {
+            // 1. Lấy trạng thái mặc định - Kiểm tra kỹ tên status trong DB
             var pendingStatus = await _context.OrderStatuses
-                .FirstOrDefaultAsync (s => s.StatusName == "Pending");
+                .FirstOrDefaultAsync(s => s.StatusName == "Pending");
 
-            //Take UserID from JWT Token
-            var customerId = _httpContext.HttpContext.User?.Claims
-                                .FirstOrDefault(c => c.Type == System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Sub)?.Value;
+            if (pendingStatus == null) throw new Exception("Hệ thống chưa thiết lập trạng thái 'Pending'.");
+            
+
+           
+
+            // 3. Truy vấn nhanh thông tin giá và tính khả dụng
+            var foodIds = request.Details.Where(d => !string.IsNullOrEmpty(d.FoodID)).Select(d => d.FoodID).ToList();
+            var comboIds = request.Details.Where(d => !string.IsNullOrEmpty(d.ComboID)).Select(d => d.ComboID).ToList();
+
+            var dbFoods = await _context.FoodItems.Where(f => foodIds.Contains(f.FoodId)).ToListAsync();
+            var dbCombos = await _context.Combos.Where(c => comboIds.Contains(c.ComboId)).ToListAsync();
+
             var orderId = Uuidv7Generator.NewUuid7().ToString();
-
-            if (string.IsNullOrEmpty(customerId)) throw new UnauthorizedAccessException("Need Login.");
-            //Create Order
-            var order = new Order
-            {
-                OrderId = orderId,
-                CustomerId = customerId,
-                OrderDate = DateTime.UtcNow,
-                DeliveryAddress = request.DeliveryAddress,
-                Note = request.Note,
-                StatusId = pendingStatus?.StatusId, //Take ID of "Pending" status
-                TotalAmout = 0
-            };
-
-            decimal? total = 0;
+            decimal? total = 0; // Đổi thành decimal (không nullable) để tính toán chính xác
             var details = new List<OrderDetail>();
 
-            //Handing Order or combo
+            // 4. Duyệt danh sách chi tiết và kiểm tra logic
             foreach (var item in request.Details)
             {
                 decimal? unitPrice = 0;
+
                 if (!string.IsNullOrEmpty(item.FoodID))
                 {
-                    var food = await _context.FoodItems.FindAsync(item.FoodID);
-                    unitPrice = food?.Price ?? 0;
+                    var food = dbFoods.FirstOrDefault(f => f.FoodId == item.FoodID);
+                    // Sửa lỗi CS0019 bằng cách so sánh rõ ràng với true
+                    if (food == null || food.IsAvailable != true)
+                        throw new Exception($"Món ăn ID {item.FoodID} không tồn tại hoặc ngừng bán.");
+
+                    unitPrice = food.Price; // Đảm bảo Price trong Entity FoodItem không null hoặc dùng ?? 0
                 }
-                else if(!string.IsNullOrEmpty(item.ComboID))
+                else if (!string.IsNullOrEmpty(item.ComboID))
                 {
-                    var combo = await _context.Combos.FindAsync(item.ComboID);
-                    unitPrice = combo?.Price ?? 0;
+                    var combo = dbCombos.FirstOrDefault(c => c.ComboId == item.ComboID);
+                    if (combo == null || combo.IsAvailable != true)
+                        throw new Exception($"Combo ID {item.ComboID} không tồn tại hoặc ngừng bán.");
+
+                    unitPrice = combo.Price;
                 }
-                var orderDetail = new OrderDetail
+
+                details.Add(new OrderDetail
                 {
                     OrderDetailId = Uuidv7Generator.NewUuid7().ToString(),
                     OrderId = orderId,
@@ -73,29 +79,38 @@ namespace FoodStore.Infrastructure.Services.Orders
                     ComboId = item.ComboID,
                     Quantity = item.Quantity,
                     UnitPrice = unitPrice
-                };
+                });
 
                 total += (unitPrice * item.Quantity);
-                details.Add(orderDetail);
             }
-            order.TotalAmout = total;
 
-            //Execute transactions to protect data.
+            // 5. Khởi tạo Order
+            var order = new Order
+            {
+                OrderId = orderId,
+                CustomerId = customerID,
+                OrderDate = DateTime.UtcNow,
+                DeliveryAddress = request.DeliveryAddress,
+                Note = request.Note,
+                StatusId = pendingStatus.StatusId,
+                TotalAmout = total // Đảm bảo không truyền null vào đây
+            };
+
             using var trans = await _context.Database.BeginTransactionAsync();
             try
             {
                 _context.Orders.Add(order);
                 _context.OrderDetails.AddRange(details);
 
-                //Write action log
+                // Ghi log hoạt động
                 _context.ActivityLogs.Add(new ActivityLog
                 {
                     LogId = Uuidv7Generator.NewUuid7().ToString(),
-                    UserId = _httpContext.HttpContext?.User?.FindFirstValue("ProfileId") ?? customerId,
+                    UserId = customerID,
                     Action = "Create New Order",
                     TagetTable = "Orders",
                     TargetId = order.OrderId,
-                    TargetName = $"OrderID: {order.OrderDate:yyyyMMdd}",
+                    TargetName = $"OrderID: {order.OrderId}",
                     TimeStamp = DateTime.UtcNow
                 });
 
@@ -103,84 +118,143 @@ namespace FoodStore.Infrastructure.Services.Orders
                 await trans.CommitAsync();
                 return order.OrderId;
             }
-            catch
+            catch (Exception ex)
             {
                 await trans.RollbackAsync();
-                throw;
+                // Ném lỗi chi tiết để debug dễ hơn thay vì lỗi 500 chung chung
+                throw new Exception($"Lỗi khi lưu đơn hàng: {ex.Message}", ex);
             }
         }
 
-        public async Task<List<OrderHistoryDto>> GetMyOrderHistoryAsync()
+        public async Task<List<OrderHistoryDto>> GetActiveOrdersAsync(string customerID)
+{
+    // Chuyển hết về chữ HOA để so sánh không sai lệch
+    var activeStatuses = new List<string> { "PENDING", "CONFIRMED", "PROCESSING", "SHIPPING" };
+
+    return await _context.Orders
+        .Where(o => o.CustomerId == customerID)
+        .Join(_context.OrderStatuses,
+            o => o.StatusId,
+            s => s.StatusId,
+            (o, s) => new { o, s })
+        // Dùng Trim() để bỏ khoảng trắng thừa và ToUpper() để so sánh chuẩn xác
+        .Where(x => activeStatuses.Contains(x.s.StatusName.Trim().ToUpper())) 
+        .Select(x => new OrderHistoryDto
         {
-            var customerId = _httpContext.HttpContext?.User?.Claims
-                .FirstOrDefault(c => c.Type == System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Sub)?.Value;
+            OrderID = x.o.OrderId,
+            OrderDate = x.o.OrderDate,
+            TotalAmount = x.o.TotalAmout ?? 0,
+            StatusName = x.s.StatusName.Trim(), // Trả về tên đã xóa khoảng trắng
+            DeliveryAddress = x.o.DeliveryAddress
+        })
+        .OrderByDescending(x => x.OrderDate)
+        .ToListAsync();
+}
+
+
+        public async Task<List<OrderHistoryDto>> GetMyOrderHistoryAsync(string customerID)
+        {
+            // Danh sách các trạng thái kết thúc (History)
+            var historyStatuses = new List<string> { "Cancelled", "Failed", "Completed", "Refunded" };
 
             return await _context.Orders
-                .Where(o => o.CustomerId == customerId)
+                .Where(o => o.CustomerId == customerID)
                 .Join(_context.OrderStatuses,
                     o => o.StatusId,
                     s => s.StatusId,
-                    (o, s) => new OrderHistoryDto
-                    {
-                        OrderID = o.OrderId,
-                        OrderDate = o.OrderDate,
-                        TotalAmount = o.TotalAmout,
-                        StatusName = s.StatusName,
-                        DeliveryAddress = o.DeliveryAddress,
-                        Note = o.Note
-                    })
+                    (o, s) => new { o, s })
+                .Where(x => historyStatuses.Contains(x.s.StatusName.Trim().ToUpper())) // Chỉ lấy đơn đã kết thúc
+                .Select(x => new OrderHistoryDto
+                {
+                    OrderID = x.o.OrderId,
+                    OrderDate = x.o.OrderDate,
+                    TotalAmount = x.o.TotalAmout ?? 0,
+                    StatusName = x.s.StatusName.Trim(),
+                    DeliveryAddress = x.o.DeliveryAddress,
+                    // Hiển thị lý do thất bại (StaffNote) cho các trạng thái không phải Completed
+                    Note = _context.OrderTrackings
+                        .Where(t => t.OrderId == x.o.OrderId)
+                        .OrderByDescending(t => t.UpdateTime)
+                        .Select(t => t.StaffNote)
+                        .FirstOrDefault()
+                })
                 .OrderByDescending(x => x.OrderDate)
-                .ToListAsync();
+              .ToListAsync();
         }
 
-        public async Task<OrderFullResponseDto> GetOrderDetailAsync(string orderId)
+        public async Task<OrderFullResponseDto> GetOrderDetailAsync(string orderId, string? customerID = null, bool isAdminOrStaff = false)
         {
-            // 1. Lấy thông tin đơn hàng
-            var order = await _context.Orders
+            // 1. Tạo query cơ bản
+            var query = _context.Orders
                 .Include(o => o.Status)
-                .FirstOrDefaultAsync(o => o.OrderId == orderId);
+                .AsQueryable();
 
+            // 2. Kiểm tra quyền: Nếu không phải Admin/Staff thì bắt buộc phải khớp CustomerId
+            if (!isAdminOrStaff)
+            {
+                if (string.IsNullOrEmpty(customerID)) return null;
+                query = query.Where(o => o.OrderId == orderId && o.CustomerId == customerID);
+            }
+            else
+            {
+                query = query.Where(o => o.OrderId == orderId.Trim());
+            }
+
+            var order = await query.FirstOrDefaultAsync();
             if (order == null) return null;
 
-            // 2. Lấy thông tin Khách hàng (Sử dụng UserId để join)
-            // Theo script: CustomerID trong Orders tham chiếu đến Users(UserID)
+            // 3. Lấy Profile khách hàng và Shipper
             var customerProfile = await _context.UserProfiles
                 .FirstOrDefaultAsync(p => p.UserId == order.CustomerId);
 
-            // 3. Lấy thông tin Shipper (Sử dụng ProfileID vì Shipper là Staff/Admin)
-            // Theo logic của bạn: Staff dùng Username làm ProfileID
+            // ShipperId thường là ProfileId của nhân viên giao hàng
             var shipperProfile = await _context.UserProfiles
-                .FirstOrDefaultAsync(p => p.ProfileId == order.ShipperId);
+                .FirstOrDefaultAsync(p => p.UserId == order.ShipperId);
 
-            // 4. Lấy chi tiết các món ăn/combo
+            // 4. Lấy chi tiết các món ăn (Dùng Join để tối ưu hiệu năng thay vì Select lồng)
             var details = await _context.OrderDetails
-                .Where(d => d.OrderId == orderId)
+                .Where(d => d.OrderId == order.OrderId)
                 .Select(d => new OrderDetailDto
                 {
                     OrderDetailId = d.OrderDetailId,
                     Quantity = d.Quantity,
-                    UnitPrice = d.UnitPrice,
-                    // Lấy tên món hoặc tên combo
+                    UnitPrice = d.UnitPrice ?? 0,
+                    // Lấy tên Food hoặc Combo
                     FoodName = _context.FoodItems.Where(f => f.FoodId == d.FoodId).Select(f => f.FoodName).FirstOrDefault(),
                     ComboName = _context.Combos.Where(c => c.ComboId == d.ComboId).Select(c => c.ComboName).FirstOrDefault()
                 }).ToListAsync();
 
+            // 5. Lấy hành trình đơn hàng (Trackings)
+            var trackings = await _context.OrderTrackings
+                .Where(t => t.OrderId == orderId)
+                .Join(_context.OrderStatuses,
+                    t => t.StatusId,
+                    s => s.StatusId,
+                    (t, s) => new OrderTrackingDto
+                    {
+                        StatusName = s.StatusName.Trim(),
+                        UpdateTime = t.UpdateTime ?? DateTime.UtcNow,
+                        Reason = t.StaffNote // Lý do cập nhật (StaffNote)
+                    })
+                .OrderByDescending(x => x.UpdateTime)
+                .ToListAsync();
+
+            // 6. Trả về kết quả
             return new OrderFullResponseDto
             {
                 OrderId = order.OrderId,
                 OrderDate = order.OrderDate,
-                StatusName = order.Status?.StatusName,
+                StatusName = order.Status?.StatusName.Trim(),
                 DeliveryAddress = order.DeliveryAddress,
                 Note = order.Note,
-                TotalAmount = order.TotalAmout,
-
-                // Trả về thông tin đã map đúng ID
-                CustomerName = customerProfile != null ? (customerProfile.FirstName + " " + customerProfile.LastName) : "N/A",
-                ShipperName = shipperProfile != null ? (shipperProfile.FirstName + " " + shipperProfile.LastName) : "Chưa bàn giao",
-                Items = details
+                TotalAmount = order.TotalAmout ?? 0,
+                CustomerName = customerProfile != null ? $"{customerProfile.FirstName} {customerProfile.LastName}" : "Khách vãng lai",
+                ShipperName = shipperProfile != null ? $"{shipperProfile.FirstName} {shipperProfile.LastName}" : "Chưa có shipper",
+                Items = details,
+                Trackings = trackings
             };
         }
 
-        
+
     }
 }

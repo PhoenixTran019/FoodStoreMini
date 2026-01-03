@@ -23,7 +23,5 @@ namespace FoodStore.Application.DTOs.Foods
 
         public string? CategoryID { get; set; }
 
-        
-
     }
 }

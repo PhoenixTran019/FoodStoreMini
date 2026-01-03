@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace FoodStoreMini.API.Controllers.OdersCon
 {
@@ -14,23 +16,24 @@ namespace FoodStoreMini.API.Controllers.OdersCon
     {
         private readonly IAdminOrderService _adminOrderService;
         private readonly AppDbContext _context;
+        private readonly ICusOrderService _cusOrderService;
 
-        public AdminOrderController(IAdminOrderService adminOrderService, AppDbContext context)
+        public AdminOrderController(IAdminOrderService adminOrderService, AppDbContext context, ICusOrderService cusOrderService)
         {
             _adminOrderService = adminOrderService;
             _context = context;
+            _cusOrderService = cusOrderService;
         }
 
         [Authorize(Roles = "Admin,Staff")]
-        [HttpGet("admin/pending-orders")]
-        public async Task<IActionResult> GetPendingOrders()
+        [HttpGet("admin/active-orders")]
+        public async Task<IActionResult> GetAdminActiveOrders()
         {
-            var pendingStatus = await _context.OrderStatuses.FirstOrDefaultAsync(s => s.StatusName == "Pending");
+            // Định nghĩa các trạng thái "Active"
+            var activeStatuses = new List<string> { "Pending", "Confirmed", "Processing", "Shipping" };
 
-            var orders = await _context.Orders
-                .Where(o => o.StatusId == pendingStatus.StatusId)
-                .Select(o => new { o.OrderId, o.OrderDate, o.TotalAmout, o.DeliveryAddress })
-                .ToListAsync();
+            // Gọi service và không truyền CustomerId để lấy toàn bộ đơn hàng
+            var orders = await _adminOrderService.GetOrdersByStatusAsync(activeStatuses);
 
             return Ok(orders);
         }
@@ -40,7 +43,18 @@ namespace FoodStoreMini.API.Controllers.OdersCon
         [HttpPut("{orderId}/Update-OrderStatus")]
         public async Task<IActionResult> UpdateStatus(string orderId, [FromBody] UpdateOrderStatusDto request)
         {
-            var result = await _adminOrderService.UpdateOrderStatusAsync(orderId, request);
+            var userId = User.FindFirst(JwtRegisteredClaimNames.Sub)?.Value
+             ?? User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            // In ra màn hình console của server
+            Console.WriteLine($"--- DEBUG: UserId nhận được từ Token là: {userId} ---");
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                Console.WriteLine("--- WARNING: Không tìm thấy Sub Claim trong Token! ---");
+            }
+
+            var result = await _adminOrderService.UpdateOrderStatusAsync(orderId, request, userId);
 
             if (!result)
                 return BadRequest("Không tìm thấy đơn hàng hoặc trạng thái không hợp lệ.");
@@ -52,12 +66,23 @@ namespace FoodStoreMini.API.Controllers.OdersCon
             });
         }
 
+        [Authorize(Roles = "Admin,Staff")]
+        [HttpGet("detail/{orderId}")]
+        public async Task<IActionResult> GetAdminDetail(string orderId)
+        {
+            // Truyền isAdminOrStaff = true để bỏ qua bước check CustomerId
+            var result = await _cusOrderService.GetOrderDetailAsync(orderId, null, isAdminOrStaff: true);
+
+            if (result == null) return NotFound("Đơn hàng không tồn tại.");
+            return Ok(result);
+        }
+
         // 5.2 ADMIN: Xem lịch sử của 1 khách hàng cụ thể (Lọc theo ProfileID)
         [Authorize(Roles = "Admin,Staff")]
-        [HttpGet("history/customer/{profileId}")]
-        public async Task<IActionResult> GetByCustomer(string profileId)
+        [HttpGet("history/customer/{userId}")]
+        public async Task<IActionResult> GetByCustomer(string userId)
         {
-            var result = await _adminOrderService.GetOrdersByCustomerAsync(profileId);
+            var result = await _adminOrderService.GetOrdersByCustomerAsync(userId);
             return Ok(result);
         }
 

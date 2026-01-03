@@ -18,6 +18,6 @@ namespace FoodStore.Application.DTOs.Foods
 
         public bool? IsAvailable { get; set; }
 
-        public List<ComboDetailRequestDto>? Items { get; set; }
+        public string? Items { get; set; }
     }
 }

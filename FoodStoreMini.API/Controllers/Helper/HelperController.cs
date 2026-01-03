@@ -39,6 +39,25 @@ namespace FoodStoreMini.API.Controllers.Helpers
             return Ok(statusList);
         }
 
+        [Authorize(Roles = "Admin")]
+        [HttpGet("Food-Categories")]
+        public async Task<IActionResult> GetFoodCategories()
+        {
+            var categoriesList = await _context.Categories
+                .Select(c => new
+                {
+                    c.CategoryId,
+                    c.CategoryName
+                })
+                .ToListAsync();
+            if(categoriesList == null || !categoriesList.Any())
+            {
+                return NotFound("No Categories found");
+            }
+
+            return Ok(categoriesList);
+        }
+
         [Authorize(Roles = "Admin, Staff")]
         [HttpGet("AvailableShippers")]
         public async Task<IActionResult> GetAvailableShippers()
@@ -46,18 +65,21 @@ namespace FoodStoreMini.API.Controllers.Helpers
             var shippers = await _context.Users
                 .Where(u => u.IsActive == true)
                 .Join(_context.Roles, u => u.RoleId, r => r.RoleId, (u, r) => new { u, r })
-                .Where(x => x.r.RoleName == "Staff")
+                .Where(x => x.r.RoleName == "Staff") // Lọc những người có quyền Staff/Shipper
                 .Join(_context.UserProfiles,
-                        combined => combined.u.Username,
-                        p => p.ProfileId,
+                        combined => combined.u.UserId, // Khớp UserID của bảng Users
+                        p => p.UserId,                 // Với UserID của bảng UserProfiles
                         (combined, p) => new
                         {
-                            ShipperProfileId = combined.u.Username,
+                            // ĐÂY LÀ GIÁ TRỊ QUAN TRỌNG NHẤT
+                            ShipperId = combined.u.UserId,
                             FullName = p.FirstName + " " + p.LastName,
                             PhoneNumber = p.StaffPhone
                         })
-                .ToArrayAsync();
+                .ToListAsync();
+
             return Ok(shippers);
         }
+
     }
 }

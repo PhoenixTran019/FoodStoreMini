@@ -67,8 +67,7 @@ namespace FoodStore.Infrastructure.Services.Auths
             {
                 "Admin" => "/admin/dashboard",
                 "Staff" => "/staff/orders",
-                "Shipper" => "/shipper/tasks",
-                "Customer" => "/home",
+                "Customer" => "/customer/dashboard",
                 _ => "/home"
             };
 

@@ -25,5 +25,7 @@ namespace FoodStore.Application.DTOs.Orders
         public decimal? TotalAmount { get; set; }
 
         public List<OrderDetailDto>? Items { get; set; }
+
+        public List<OrderTrackingDto>? Trackings { get; set; } = new List<OrderTrackingDto>();
     }
 }

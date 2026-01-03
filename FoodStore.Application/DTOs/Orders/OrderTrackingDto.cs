@@ -11,5 +11,7 @@ namespace FoodStore.Application.DTOs.Orders
         public string? StatusName { get; set; }
 
         public DateTime? UpdateTime { get; set; }
+
+        public string? Reason { get; set; }
     }
 }
